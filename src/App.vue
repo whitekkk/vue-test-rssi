@@ -8,8 +8,8 @@
     <div class="aInp">
       <div class="inp" v-for="(i, index) in position" :key="index">
         {{i.name}}
-        <input v-model="i.radius" @input="plotUser">
-        {{i.radius}}
+        <!-- <input v-model="i.radius" @input="plotUser"> -->
+        {{i.radius / 50}}
         <!-- <input v-model="radius[1]" @input="test">
         {{radius[1]}}
         <input v-model="radius[2]" @input="test">
@@ -40,7 +40,7 @@
 <script>
 import Vue from 'vue'
 import VueSocketio from 'vue-socket.io'
-Vue.use(VueSocketio, 'http://localhost:3001/')
+Vue.use(VueSocketio, 'http://localhost:3010/')
 
 // window.onscroll = function (e) {
 //   var scrollX = window.scrollX
@@ -82,15 +82,37 @@ export default {
       console.log('socket connected')
     },
     wifi (network) {
-      var vm = this
-      vm.rssi = network
-      for (var i = 0; i < vm.rssi.length; i++) {
-        vm.rssi[i].far = vm.calculateDistance(vm.rssi[i].rssi)
-        // console.log(vm.rssi[i])
-        // console.log(i)
+      if (this.rssi.length === 0) {
+        this.rssi = network
+        this.rssi.forEach(e => {
+          e.indicator = 40
+          e.indicator = this.changeIndicator(e.rssi)
+          e.far = this.calculateDistance(e.rssi, e.indicator)
+        })
+      } else {
+        network.forEach((e, i) => {
+          // var index = vm.rssi.findIndex(rssi => rssi.mac === e.mac)
+          // if (index !== -1) {
+          //
+          // }
+          var item = this.rssi.find(rssi => rssi.mac === e.mac)
+          if (item) {
+            item.channel = e.channel
+            item.rssi = e.rssi
+            item.quality = e.quality
+            item.indicator = this.changeIndicator(item.rssi)
+            item.far = this.calculateDistance(item.rssi, item.indicator)
+          } else {
+            // console.log('not item')
+            e.indicator = 40
+            e.indicator = this.changeIndicator(e.rssi)
+            e.far = this.calculateDistance(e.rssi, e.indicator)
+            this.rssi.push(e)
+          }
+        })
       }
       this.position.map((item) => {
-        i = vm.rssi.find(items => items.mac === item.mac)
+        let i = this.rssi.find(items => items.mac === item.mac)
         item.radius = i.far
       })
       this.plotUser()
@@ -130,7 +152,7 @@ export default {
           this.width.one = 0
           this.width.two = 0
           this.width.enable = false
-          console.log(this.width.now)
+          // console.log(this.width.now)
           canvas.width = this.width.now
         }
         // console.log(this.width.now)
@@ -143,7 +165,7 @@ export default {
           this.height.one = 0
           this.height.two = 0
           this.height.enable = false
-          console.log(this.height.now)
+          // console.log(this.height.now)
           canvas.height = this.height.now
         }
       }
@@ -161,6 +183,13 @@ export default {
       }
       this.plotUser()
       // console.log(e)
+    },
+    changeIndicator (rssi) {
+      if (Math.abs(rssi) < 40) {
+        return Math.abs(rssi)
+      } else {
+        return 40
+      }
     },
     getAPName (name, mac) {
       this.name = name
@@ -181,7 +210,7 @@ export default {
       }
       if (this.position.length > 2) {
         this.drawPoint()
-        console.log(this.position.length)
+        // console.log(this.position.length)
       }
     },
     updateCanvas () {
@@ -199,7 +228,7 @@ export default {
       let position = window.event
       var i = this.position.findIndex(items => items.mac === this.mac)
       // console.log(i)
-      console.log(window.scrollX)
+      // console.log(window.scrollX)
       if (i === -1 && this.mac !== '') {
         if (this.count < 6) {
           this.mouseX = position.clientX + window.scrollX
@@ -315,7 +344,7 @@ export default {
         return (y1 - (Math.abs(y1 - y2) * r))
       }
     },
-    calculateDistance (rssi) {
+    calculateDistance (rssi, i) {
       var txPower = -43.8
       // hard coded power value. Usually ranges between -59 to -65
       if (rssi === 0) {
@@ -325,8 +354,14 @@ export default {
       if (ratio < 1.0) {
         return Math.pow(ratio, 10)
       } else {
-        var distance = Math.pow(10, ((-35 - (rssi)) / (10 * 2)))
+        // var distance = Math.pow(10, ((-35 - (rssi)) / (10 * 2)))
         // var distance = (0.89976) * Math.pow(ratio, 7.7095) + 0.111
+        var rssiAvg = i
+        var distance = Math.abs(rssi + rssiAvg)
+        if (distance === 0) {
+          distance = 1
+        }
+        // console.log(distance)
         return distance * 50
         // return distance
       }

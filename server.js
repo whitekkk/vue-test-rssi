@@ -28,7 +28,7 @@ app.use(express.static('dist'))
   var valx = 0
   getGateway()
   // getVal()
-  var community = 'public'
+  // var community = 'public'
 
   function timestamp(time){
       return (time/360000 |0)
@@ -39,7 +39,6 @@ app.use(express.static('dist'))
       // console.log(ip)
     })
   }
-
   io.on('connection', function (socket) {
     setInterval(function(){
       scanner.scan((err, networks) => {
@@ -48,13 +47,15 @@ app.use(express.static('dist'))
           return
         }
         // console.log(networks)
+        console.log(networks)
         socket.emit('wifi', networks)
+        return
         // console.log(networks)
       })
-    }, 5000)
+    }, 3000)
   })
 
-  app.set('port', (process.env.PORT || 3001))
+  app.set('port', (process.env.PORT || 3010))
   server.listen(app.get('port'), function () {
     console.log('Express server listening on port %d in %s mode', this.address().port, app.settings.env)
   })
