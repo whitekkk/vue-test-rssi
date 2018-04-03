@@ -47,12 +47,11 @@ app.use(express.static('dist'))
           return
         }
         // console.log(networks)
-        console.log(networks)
         socket.emit('wifi', networks)
         return
         // console.log(networks)
       })
-    }, 3000)
+    }, 1000)
   })
 
   app.set('port', (process.env.PORT || 3010))

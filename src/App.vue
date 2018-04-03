@@ -22,7 +22,7 @@
     </div>
     <div class="bInp">
       <div v-for="(i, index) in rssi" :key="index" @click="getAPName(i.ssid, i.mac)">
-        {{i.ssid}} {{i.rssi}} channel{{i.channel}}
+        {{i.ssid}} {{i.rssi}} channel{{i.channel}} rssi with quality{{i.quality/2 - 100}}
       </div>
     </div>
     <div class="sho" @click.left="setHW()">
@@ -46,6 +46,8 @@ Vue.use(VueSocketio, 'http://localhost:3010/')
 //   var scrollX = window.scrollX
 //   var scrollY = window.scrollY
 // }
+var d = new Date()
+var morethan50 = require('./../morethan50')
 
 export default {
   name: 'App',
@@ -63,7 +65,7 @@ export default {
       width: {
         one: 0,
         two: 0,
-        now: '',
+        now: '1359',
         enable: false
       },
       height: {
@@ -82,35 +84,52 @@ export default {
       console.log('socket connected')
     },
     wifi (network) {
+      d = new Date()
       if (this.rssi.length === 0) {
         this.rssi = network
         this.rssi.forEach(e => {
+          e.time = d.getSeconds()
           e.indicator = 40
-          e.indicator = this.changeIndicator(e.rssi)
-          e.far = this.calculateDistance(e.rssi, e.indicator)
+          e.morethan50 = morethan50
+          e.indicator = this.changeIndicator(e.rssi, e.indicator)
+          e.far = this.calculateDistance(e.rssi, e.indicator, e.indicator, e.mac)
         })
       } else {
-        network.forEach((e, i) => {
+        network.forEach(e => {
           // var index = vm.rssi.findIndex(rssi => rssi.mac === e.mac)
           // if (index !== -1) {
           //
           // }
+          // console.log(e.times)
           var item = this.rssi.find(rssi => rssi.mac === e.mac)
           if (item) {
+            // console.log(item)
+            item.time = d.getSeconds()
             item.channel = e.channel
             item.rssi = e.rssi
             item.quality = e.quality
-            item.indicator = this.changeIndicator(item.rssi)
-            item.far = this.calculateDistance(item.rssi, item.indicator)
+            item.indicator = this.changeIndicator(item.rssi, item.indicator)
+            item.far = this.calculateDistance(item.rssi, item.indicator, item.quality, item.mac)
           } else {
             // console.log('not item')
+            e.time = d.getSeconds()
             e.indicator = 40
-            e.indicator = this.changeIndicator(e.rssi)
-            e.far = this.calculateDistance(e.rssi, e.indicator)
+            e.morethan50 = morethan50
+            e.indicator = this.changeIndicator(e.rssi, e.indicator)
+            e.far = this.calculateDistance(e.rssi, e.indicator, e.quality, e.mac)
             this.rssi.push(e)
           }
         })
       }
+      this.rssi.forEach((e, i) => {
+        let time = e.time % 4
+        let timeNow = d.getSeconds() % 4
+        let checkTime = Math.abs(timeNow - time)
+        if (checkTime >= 3) {
+          this.rssi.splice(i, 1)
+        }
+      })
+
       this.position.map((item) => {
         let i = this.rssi.find(items => items.mac === item.mac)
         item.radius = i.far
@@ -184,11 +203,14 @@ export default {
       this.plotUser()
       // console.log(e)
     },
-    changeIndicator (rssi) {
-      if (Math.abs(rssi) < 40) {
-        return Math.abs(rssi)
-      } else {
+    changeIndicator (rssi, indicator) {
+      var inverst = Math.abs(rssi)
+      if (inverst < indicator) {
+        return inverst
+      } else if (indicator >= 40) {
         return 40
+      } else {
+        return indicator
       }
     },
     getAPName (name, mac) {
@@ -321,8 +343,6 @@ export default {
         var V = (Math.pow(xe, 2) - Math.pow(xb, 2) + Math.pow(ye, 2) - Math.pow(yb, 2) + Math.pow(rb, 2) - Math.pow(re, 2)) / 2
         var yt = ((T * (xb - xe)) - (V * (xb - xa))) / (((ya - yb) * (xb - xe)) - ((ye - yb) * (xb - xa)))
         var xt = ((yt * (ya - yb)) - T) / (xb - xa)
-        console.log(xt)
-        console.log(yt)
         this.plotPoint('yellow', xt, yt)
       }
     },
@@ -344,27 +364,44 @@ export default {
         return (y1 - (Math.abs(y1 - y2) * r))
       }
     },
-    calculateDistance (rssi, i) {
-      var txPower = -43.8
-      // hard coded power value. Usually ranges between -59 to -65
-      if (rssi === 0) {
-        return -1.0
-      }
-      var ratio = rssi * (1.0 / txPower)
-      if (ratio < 1.0) {
-        return Math.pow(ratio, 10)
-      } else {
-        // var distance = Math.pow(10, ((-35 - (rssi)) / (10 * 2)))
-        // var distance = (0.89976) * Math.pow(ratio, 7.7095) + 0.111
-        var rssiAvg = i
-        var distance = Math.abs(rssi + rssiAvg)
-        if (distance === 0) {
-          distance = 1
+    calculateDistance (rssi, i, q, mac) {
+      // var txPower = -43.8
+      // // hard coded power value. Usually ranges between -59 to -65
+      // if (rssi === 0) {
+      //   return -1.0
+      // }
+      // var ratio = rssi * (1.0 / txPower)
+      // if (ratio < 1.0) {
+      //   return Math.pow(ratio, 10)
+      // } else {
+      //   // var distance = Math.pow(10, ((-35 - (rssi)) / (10 * 2)))
+      //   // var distance = (0.89976) * Math.pow(ratio, 7.7095) + 0.111
+      //   var rssiAvg = i
+      //   var distance = Math.abs(rssi + rssiAvg)
+      //   if (distance === 0) {
+      //     distance = 1
+      //   }
+      //   // console.log(distance)
+      //   return distance * 50
+      //   // return distance
+      // }
+      var item = this.rssi.find(rssi => rssi.mac === mac)
+      q = Math.abs(q / 2 - 100)
+      if (q > 50 && item) {
+        if (item.morethan50[q] === 0) {
+          item.morethan50[q] = rssi
+        } else if (item.morethan50[q] > rssi) {
+          item.morethan50[q] = rssi
         }
-        // console.log(distance)
-        return distance * 50
-        // return distance
+        rssi = item.morethan50[q]
       }
+      let rssiMin = i
+      let distance = Math.abs((rssi + rssiMin) / 2)
+      if (distance === 0) {
+        distance = 1
+      }
+      // console.log(distance)
+      return distance * 50
     }
   },
   components: {

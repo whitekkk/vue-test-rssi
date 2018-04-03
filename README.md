@@ -20,8 +20,10 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-Add code in node_modules > node-wifi-scanner > lib > iwlist.js (line 52) before run this project
+Add code in node_modules > node-wifi-scanner > lib > iwlist.js before run this project
 
+(line 7) const tool    = '/sbin/iwlist';
+(line 52)
 var elements = line.split('=');
 elements.forEach(e => {
   if (e.indexOf('/') > 0) {
