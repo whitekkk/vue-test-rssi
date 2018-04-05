@@ -4,7 +4,7 @@
       <button @click="setH"> H </button>x
       <button @click="setW"> W </button>
     </div>
-    <img class="plan" src="../static/img/plan.png" :width="width.now" :height="height.now"/>
+    <img class="plan" src="../static/img/plan-2.png" :width="width.now" :height="height.now"/>
     <div class="aInp">
       <div class="inp" v-for="(i, index) in position" :key="index">
         {{i.name}}
@@ -48,6 +48,7 @@ Vue.use(VueSocketio, 'http://localhost:3010/')
 // }
 var d = new Date()
 var morethan50 = require('./../morethan50')
+var db = require('./../rssiDB')
 
 export default {
   name: 'App',
@@ -92,7 +93,7 @@ export default {
           e.indicator = 40
           e.morethan50 = morethan50
           e.indicator = this.changeIndicator(e.rssi, e.indicator)
-          e.far = this.calculateDistance(e.rssi, e.indicator, e.indicator, e.mac)
+          e.far = 0
         })
       } else {
         network.forEach(e => {
@@ -109,18 +110,23 @@ export default {
             item.rssi = e.rssi
             item.quality = e.quality
             item.indicator = this.changeIndicator(item.rssi, item.indicator)
-            item.far = this.calculateDistance(item.rssi, item.indicator, item.quality, item.mac)
+            // item.far = this.calculateDistance(item.rssi, item.indicator, item.quality, item.mac)
           } else {
             // console.log('not item')
             e.time = d.getSeconds()
             e.indicator = 40
             e.morethan50 = morethan50
             e.indicator = this.changeIndicator(e.rssi, e.indicator)
-            e.far = this.calculateDistance(e.rssi, e.indicator, e.quality, e.mac)
+            e.far = 0
             this.rssi.push(e)
           }
         })
       }
+      this.position.forEach(e => {
+        let i = this.rssi.find(item => item.mac === e.mac)
+        i.far = this.calculateDistance(i.rssi, i.indicator, i.quality, i.mac)
+        e.radius = i.far
+      })
       this.rssi.forEach((e, i) => {
         let time = e.time % 4
         let timeNow = d.getSeconds() % 4
@@ -129,17 +135,12 @@ export default {
           this.rssi.splice(i, 1)
         }
       })
-
-      this.position.map((item) => {
-        let i = this.rssi.find(items => items.mac === item.mac)
-        item.radius = i.far
-      })
       this.plotUser()
       // console.log(network)
     }
   },
   methods: {
-    shows () {
+    test () {
       console.log(window['mouseX'])
     },
     reMac (mac) {
@@ -256,6 +257,8 @@ export default {
           this.mouseX = position.clientX + window.scrollX
           this.mouseY = position.clientY + window.scrollY
           this.position.push({name: this.name, x: this.mouseX, y: this.mouseY, mac: this.mac, radius: 0})
+          var item = this.rssi.find(rssi => rssi.mac === this.mac)
+          item.far = this.calculateDistance(item.rssi, item.indicator, item.indicator, item.mac)
           // this.radius.push(0)
           this.updateCanvas()
           this.count++
@@ -385,6 +388,7 @@ export default {
       //   return distance * 50
       //   // return distance
       // }
+      // quality solution
       var item = this.rssi.find(rssi => rssi.mac === mac)
       q = Math.abs(q / 2 - 100)
       if (q > 50 && item) {
@@ -395,10 +399,38 @@ export default {
         }
         rssi = item.morethan50[q]
       }
+      // nomal solution
       let rssiMin = i
       let distance = Math.abs((rssi + rssiMin) / 2)
       if (distance === 0) {
         distance = 1
+      }
+      // db solution
+      for (let i in Object.keys(db)) {
+        if (db[i - 1]) {
+          // find range of distance
+          if (rssi <= db[i - 1].db1 && rssi > db[i].db2) {
+            // find where rssi nearby
+            let low, height
+            height = Math.abs(rssi - db[i - 1].abA)
+            low = Math.abs(rssi - db[i].abA)
+            // verify distance
+            if (height > low) {
+              if (db[i].abA <= rssi) {
+                distance = parseInt(i) + 1
+              } else {
+                distance = parseInt(i) + 1 + 0.5
+              }
+            } else {
+              if (db[i - 1].abA <= rssi) {
+                distance = parseInt(i)
+              } else {
+                distance = parseInt(i) + 0.5
+              }
+            }
+          }
+        }
+        // console.log(db[i], i)
       }
       // console.log(distance)
       return distance * 50
@@ -407,7 +439,8 @@ export default {
   components: {
   },
   mounted () {
-    this.shows()
+    // this.test()
+    // console.log(db)
     // this.width.now = img.width
     // this.$socket.emit('setName', {name: vm.nameMe, room: vm.key})
   }
