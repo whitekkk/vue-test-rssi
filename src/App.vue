@@ -400,11 +400,15 @@ export default {
         rssi = item.morethan50[q]
       }
       // nomal solution
+      //
       let rssiMin = i
-      let distance = Math.abs((rssi + rssiMin) / 2)
-      if (distance === 0) {
-        distance = 1
-      }
+      // let distance = Math.abs((rssi + rssiMin) / 2)
+      // if (distance === 0) {
+      //   distance = 1
+      // }
+      //
+      // from dBm = -10n log10(d) + A chage to find d
+      let distance = Math.pow(10, ((-1 * rssi) - rssiMin) / (10 * 2))
       // db solution
       for (let i in Object.keys(db)) {
         if (db[i - 1]) {
@@ -430,7 +434,6 @@ export default {
             }
           }
         }
-        // console.log(db[i], i)
       }
       // console.log(distance)
       return distance * 50
