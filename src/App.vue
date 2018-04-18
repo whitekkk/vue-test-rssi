@@ -3,13 +3,14 @@
     <div class="hxw">
       <button @click="setH"> H </button>x
       <button @click="setW"> W </button>
+      <input v-model="n">
     </div>
-    <img class="plan" src="../static/img/plan-2.png" :width="width.now" :height="height.now"/>
+    <img class="plan" src="../static/img/plan.png" :width="width.now" :height="height.now"/>
     <div class="aInp">
       <div class="inp" v-for="(i, index) in position" :key="index">
         {{i.name}}
         <!-- <input v-model="i.radius" @input="plotUser"> -->
-        {{i.radius / 50}}
+        {{i.radiusA / 50}}
         <!-- <input v-model="radius[1]" @input="test">
         {{radius[1]}}
         <input v-model="radius[2]" @input="test">
@@ -48,7 +49,8 @@ Vue.use(VueSocketio, 'http://localhost:3010/')
 // }
 var d = new Date()
 var morethan50 = require('./../morethan50')
-var db = require('./../rssiDB')
+// var db = require('./../rssiDB')
+var gridArr = require('./../gridArr')
 
 export default {
   name: 'App',
@@ -74,7 +76,10 @@ export default {
         two: 0,
         now: 834,
         enable: false
-      }
+      },
+      n: 2.4,
+      counts: 0,
+      typeC: {}
     }
   },
   created () {
@@ -102,31 +107,52 @@ export default {
           //
           // }
           // console.log(e.times)
-          var item = this.rssi.find(rssi => rssi.mac === e.mac)
-          if (item) {
-            // console.log(item)
-            item.time = d.getSeconds()
-            item.channel = e.channel
-            item.rssi = e.rssi
-            item.quality = e.quality
-            item.indicator = this.changeIndicator(item.rssi, item.indicator)
-            // item.far = this.calculateDistance(item.rssi, item.indicator, item.quality, item.mac)
-          } else {
-            // console.log('not item')
-            e.time = d.getSeconds()
-            e.indicator = 40
-            e.morethan50 = morethan50
-            e.indicator = this.changeIndicator(e.rssi, e.indicator)
-            e.far = 0
-            this.rssi.push(e)
+          if (e.mac === '2A:A4:3C:BF:3D:AA' || e.mac === '2A:A4:3C:BF:3E:12' || e.mac === '2A:A4:3C:BD:65:C6') {
+            if (this.counts < 30) {
+              console.log(e.ssid, e.rssi)
+              this.counts++
+            }
+            var item = this.rssi.find(rssi => rssi.mac === e.mac)
+            if (item) {
+              // console.log(item)
+              item.time = d.getSeconds()
+              item.channel = e.channel
+              item.rssi = e.rssi
+              item.quality = e.quality
+              item.indicator = this.changeIndicator(item.rssi, item.indicator)
+              // item.far = this.calculateDistanceTypeA(item.rssi, item.indicator, item.quality, item.mac)
+            } else {
+              // console.log('not item')
+              e.time = d.getSeconds()
+              e.indicator = 40
+              e.morethan50 = morethan50
+              e.indicator = this.changeIndicator(e.rssi, e.indicator)
+              e.far = 0
+              this.rssi.push(e)
+            }
           }
         })
       }
+      let temp1 = 0
+      let temp2 = 0
+      let temp3 = 0
       this.position.forEach(e => {
         let i = this.rssi.find(item => item.mac === e.mac)
-        i.far = this.calculateDistance(i.rssi, i.indicator, i.quality, i.mac)
-        e.radius = i.far
+        i.farA = this.calculateDistanceTypeA(i.rssi, i.indicator, i.quality, i.mac)
+        i.farB = this.calculateDistanceTypeB(i.rssi, i.indicator, i.quality, i.mac)
+        if (i.mac === '2A:A4:3C:BF:3D:AA') {
+          temp1 = i.rssi
+        } else if (i.mac === '2A:A4:3C:BF:3E:12') {
+          temp2 = i.rssi
+        } else if (i.mac === '2A:A4:3C:BD:65:C6') {
+          temp3 = i.rssi
+        }
+        e.radiusA = i.farA
+        e.radiusB = i.farB
       })
+      if (temp1 !== 0 && temp2 !== 0 && temp3 !== 0) {
+        this.typeC = this.calculateDistanceTypeC(temp1, temp2, temp3)
+      }
       this.rssi.forEach((e, i) => {
         let time = e.time % 4
         let timeNow = d.getSeconds() % 4
@@ -226,13 +252,19 @@ export default {
       this.width.now = img.width
       canvas.width = this.width.now
       context.clearRect(0, 0, canvas.width, canvas.height)
+      var allPA = []
+      var allPB = []
       for (var i = 0; i < this.position.length; i++) {
         // console.log(i)
         this.drawCricle(i)
         this.plotPoint('red', this.position[i].x, this.position[i].y)
+        allPA[i] = this.position[i].radiusA
+        allPB[i] = this.position[i].radiusB
       }
       if (this.position.length > 2) {
-        this.drawPoint()
+        this.drawPoint(allPA, 'cyan')
+        this.drawPoint(allPB, 'magenta')
+        this.drawPointC(this.typeC, 'yellow')
         // console.log(this.position.length)
       }
     },
@@ -252,13 +284,17 @@ export default {
       var i = this.position.findIndex(items => items.mac === this.mac)
       // console.log(i)
       // console.log(window.scrollX)
+      // console.log(position.clientX)
+      // console.log(position.clientY)
       if (i === -1 && this.mac !== '') {
         if (this.count < 6) {
           this.mouseX = position.clientX + window.scrollX
           this.mouseY = position.clientY + window.scrollY
-          this.position.push({name: this.name, x: this.mouseX, y: this.mouseY, mac: this.mac, radius: 0})
+          this.position.push({name: this.name, x: this.mouseX, y: this.mouseY, mac: this.mac, radiusA: 0, radiusB: 0, radiusC: 0})
           var item = this.rssi.find(rssi => rssi.mac === this.mac)
-          item.far = this.calculateDistance(item.rssi, item.indicator, item.indicator, item.mac)
+          item.farA = this.calculateDistanceTypeA(item.rssi, item.indicator, item.indicator, item.mac)
+          item.farB = this.calculateDistanceTypeB(item.rssi, item.indicator, item.indicator, item.mac)
+          // item.farC = this.calculateDistanceTypeC(item.rssi, item.indicator, item.indicator, item.mac)
           // this.radius.push(0)
           this.updateCanvas()
           this.count++
@@ -281,11 +317,14 @@ export default {
       context.beginPath()
       context.strokeStyle = 'black'
       context.lineWidth = 2
-      context.arc(this.position[i].x, this.position[i].y, this.position[i].radius, 0, Math.PI * 2, false)
+      context.arc(this.position[i].x, this.position[i].y, this.position[i].radiusA, 0, Math.PI * 2, false)
       context.stroke()
       context.closePath()
     },
-    drawPoint () {
+    drawPointC (p, color) {
+      this.plotPoint(color, p.x, p.y)
+    },
+    drawPoint (p, color) {
       // var x1 = this.position[0].x
       // var y1 = this.position[0].y
       // var x2 = this.position[1].x
@@ -309,45 +348,57 @@ export default {
       //
       // var long2 = this.calLong(x3, y3, xcc, ycc)
       // var r3 = (this.radius[2] / long2)
-      // var xn = this.calPointInLineX(x3, xcc, r3)
+      // var xn = this.calPointInLineX(x3, xcc, r3)this.position[i].radiusA
       // var yn = this.calPointInLineY(y3, ycc, r3)
       // this.plotPoint('green', xn, yn)
 
       // triangulation
+      var sureX = 0
+      var sureY = 0
       var xa = this.position[0].x
       var ya = this.position[0].y
       var xb = this.position[1].x
       var yb = this.position[1].y
       var xc = this.position[2].x
       var yc = this.position[2].y
-      var ra = this.position[0].radius
-      var rb = this.position[1].radius
-      var rc = this.position[2].radius
+      var ra = p[0]
+      var rb = p[1]
+      var rc = p[2]
       var S = (Math.pow(xc, 2) - Math.pow(xb, 2) + Math.pow(yc, 2) - Math.pow(yb, 2) + Math.pow(rb, 2) - Math.pow(rc, 2)) / 2
       var T = (Math.pow(xa, 2) - Math.pow(xb, 2) + Math.pow(ya, 2) - Math.pow(yb, 2) + Math.pow(rb, 2) - Math.pow(ra, 2)) / 2
       var y = ((T * (xb - xc)) - (S * (xb - xa))) / (((ya - yb) * (xb - xc)) - ((yc - yb) * (xb - xa)))
       var x = ((y * (ya - yb)) - T) / (xb - xa)
-      this.plotPoint('cyan', x, y)
+      sureX = x
+      sureY = y
+      // this.plotPoint('cyan', x, y)
 
       // 4
       if (this.position.length > 3) {
         var xd = this.position[3].x
         var yd = this.position[3].y
-        var rd = this.position[3].radius
+        var rd = p[3]
         var U = (Math.pow(xd, 2) - Math.pow(xb, 2) + Math.pow(yd, 2) - Math.pow(yb, 2) + Math.pow(rb, 2) - Math.pow(rd, 2)) / 2
         var ys = ((T * (xb - xd)) - (U * (xb - xa))) / (((ya - yb) * (xb - xd)) - ((yd - yb) * (xb - xa)))
         var xs = ((ys * (ya - yb)) - T) / (xb - xa)
-        this.plotPoint('magenta', xs, ys)
+        sureX = x + xs / 2
+        sureY = y + ys / 2
+        // this.plotPoint('magenta', xs, ys)
       }
       if (this.position.length > 4) {
         var xe = this.position[4].x
         var ye = this.position[4].y
-        var re = this.position[4].radius
+        var re = p[4]
         var V = (Math.pow(xe, 2) - Math.pow(xb, 2) + Math.pow(ye, 2) - Math.pow(yb, 2) + Math.pow(rb, 2) - Math.pow(re, 2)) / 2
         var yt = ((T * (xb - xe)) - (V * (xb - xa))) / (((ya - yb) * (xb - xe)) - ((ye - yb) * (xb - xa)))
         var xt = ((yt * (ya - yb)) - T) / (xb - xa)
-        this.plotPoint('yellow', xt, yt)
+        sureX = x + xs + xt / 3
+        sureY = y + ys + yt / 3
+        // this.plotPoint('yellow', xt, yt)
       }
+      if (color === 'cyan') {
+        console.log(sureX, sureY)
+      }
+      this.plotPoint(color, sureX, sureY)
     },
     calLong (x1, y1, x2, y2) {
       return (Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)))
@@ -367,7 +418,7 @@ export default {
         return (y1 - (Math.abs(y1 - y2) * r))
       }
     },
-    calculateDistance (rssi, i, q, mac) {
+    calculateDistanceTypeA (rssi, i, q, mac) {
       // var txPower = -43.8
       // // hard coded power value. Usually ranges between -59 to -65
       // if (rssi === 0) {
@@ -389,16 +440,16 @@ export default {
       //   // return distance
       // }
       // quality solution
-      var item = this.rssi.find(rssi => rssi.mac === mac)
-      q = Math.abs(q / 2 - 100)
-      if (q > 50 && item) {
-        if (item.morethan50[q] === 0) {
-          item.morethan50[q] = rssi
-        } else if (item.morethan50[q] > rssi) {
-          item.morethan50[q] = rssi
-        }
-        rssi = item.morethan50[q]
-      }
+      // var item = this.rssi.find(rssi => rssi.mac === mac)
+      // q = Math.abs(q / 2 - 100)
+      // if (q > 50 && item) {
+      //   if (item.morethan50[q] === 0) {
+      //     item.morethan50[q] = rssi
+      //   } else if (item.morethan50[q] > rssi) {
+      //     item.morethan50[q] = rssi
+      //   }
+      //   rssi = item.morethan50[q]
+      // }
       // nomal solution
       //
       let rssiMin = i
@@ -408,35 +459,68 @@ export default {
       // }
       //
       // from dBm = -10n log10(d) + A chage to find d
-      let distance = Math.pow(10, ((-1 * rssi) - rssiMin) / (10 * 2))
+      let distance = Math.pow(10, ((-1 * rssi) - rssiMin) / (10 * this.n))
       // db solution
-      for (let i in Object.keys(db)) {
-        if (db[i - 1]) {
-          // find range of distance
-          if (rssi <= db[i - 1].db1 && rssi > db[i].db2) {
-            // find where rssi nearby
-            let low, height
-            height = Math.abs(rssi - db[i - 1].abA)
-            low = Math.abs(rssi - db[i].abA)
-            // verify distance
-            if (height > low) {
-              if (db[i].abA <= rssi) {
-                distance = parseInt(i) + 1
-              } else {
-                distance = parseInt(i) + 1 + 0.5
-              }
-            } else {
-              if (db[i - 1].abA <= rssi) {
-                distance = parseInt(i)
-              } else {
-                distance = parseInt(i) + 0.5
+      // for (let i in Object.keys(db)) {
+      //   if (db[i - 1]) {
+      //     // find range of distance
+      //     if (rssi <= db[i - 1].db1 && rssi > db[i].db2) {
+      //       // find where rssi nearby
+      //       let low, height
+      //       height = Math.abs(rssi - db[i - 1].abA)
+      //       low = Math.abs(rssi - db[i].abA)
+      //       // verify distance
+      //       if (height > low) {
+      //         if (db[i].abA <= rssi) {
+      //           distance = parseInt(i) + 1
+      //         } else {
+      //           distance = parseInt(i) + 1 + 0.5
+      //         }
+      //       } else {
+      //         if (db[i - 1].abA <= rssi) {
+      //           distance = parseInt(i)
+      //         } else {
+      //           distance = parseInt(i) + 0.5
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+      // console.log(distance)
+      return distance * 50
+    },
+    calculateDistanceTypeB (rssi, i, q, mac) {
+      // quality solutiont
+      rssi = Math.abs(q / 2 - 100)
+      let rssiMin = i
+      let distance = Math.pow(10, ((-1 * rssi) - rssiMin) / (10 * this.n))
+      return distance * 50
+    },
+    calculateDistanceTypeC (rssi1, rssi2, rssi3) {
+      // quality solution
+      let goodGrid = []
+      let mockGrid = gridArr
+      // let tempX = 0
+      // let tempY = 0
+      for (let i = 0; i < mockGrid.length; i++) {
+        if (Math.abs(mockGrid[i][0] - rssi1) < 7 && Math.abs(mockGrid[0][1] - rssi2) < 7 && Math.abs(mockGrid[i][2] - rssi3) < 7) {
+          mockGrid[i].push(i, 0)
+          goodGrid.push(mockGrid[i])
+        }
+      }
+      if (goodGrid.length > 1) {
+        for (let i = 0; i < gridArr.length; i++) {
+          for (let j = 0; j < 3; j++) {
+            if (goodGrid[i][j] < 3) {
+              goodGrid[gridArr.length - 1]++
+              if (goodGrid[gridArr.length - 1] > 2) {
+                return ({x: (45 * (goodGrid[i][goodGrid[i].length - 1] % 12)) + 121 + 15, y: (Math.floor(goodGrid[i][goodGrid[i].length - 1] / 12) * 45) + 154 + 15})
               }
             }
           }
         }
       }
-      // console.log(distance)
-      return distance * 50
+      return ({x: (45 * (goodGrid[0][goodGrid[0].length - 1] % 12)) + 121 + 15, y: (Math.floor(goodGrid[0][goodGrid[0].length - 1] / 12) * 45) + 154 + 15})
     }
   },
   components: {
@@ -485,6 +569,7 @@ div.bInp {
   position: absolute;
   z-index: 9999;
   right: 0;
+  bottom: 0;
   /* left: 150px; */
 }
 div.hxw {
