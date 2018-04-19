@@ -23,7 +23,7 @@
     </div>
     <div class="bInp">
       <div v-for="(i, index) in rssi" :key="index" @click="getAPName(i.ssid, i.mac)">
-        {{i.ssid}} {{i.rssi}} channel{{i.channel}} rssi with quality{{i.quality/2 - 100}}
+        {{i.ssid}} {{i.rssi}} channel{{i.channel}} rssi with quality{{i.quality/2 - 100}} {{i.mac}}
       </div>
     </div>
     <div class="sho" @click.left="setHW()">
@@ -63,6 +63,7 @@ export default {
       // radius: [],
       rssi: [],
       x: 0,
+      y: 0,
       name: '',
       mac: '',
       width: {
@@ -108,6 +109,7 @@ export default {
           // }
           // console.log(e.times)
           if (e.mac === '2A:A4:3C:BF:3D:AA' || e.mac === '2A:A4:3C:BF:3E:12' || e.mac === '2A:A4:3C:BD:65:C6') {
+          // if (e.mac === '2A:A4:3C:BF:3D:AA' || e.mac === '2E:51:01:1A:2B:C0' || e.mac === 'E2:AA:96:D4:F3:46') {
             if (this.counts < 30) {
               console.log(e.ssid, e.rssi)
               this.counts++
@@ -147,11 +149,23 @@ export default {
         } else if (i.mac === '2A:A4:3C:BD:65:C6') {
           temp3 = i.rssi
         }
+        // if (i.mac === '2A:A4:3C:BF:3D:AA') {
+        //   temp1 = i.rssi
+        // } else if (i.mac === '2E:51:01:1A:2B:C0') {
+        //   temp2 = i.rssi
+        // } else if (i.mac === 'E2:AA:96:D4:F3:46') {
+        //   temp3 = i.rssi
+        // }
         e.radiusA = i.farA
         e.radiusB = i.farB
       })
       if (temp1 !== 0 && temp2 !== 0 && temp3 !== 0) {
-        this.typeC = this.calculateDistanceTypeC(temp1, temp2, temp3)
+        let tC = this.calculateDistanceTypeC(temp1, temp2, temp3)
+        if (tC.x !== 181 || this.x === 0) {
+          this.typeC = tC
+          this.x = tC.x
+          this.y = tC.y
+        }
       }
       this.rssi.forEach((e, i) => {
         let time = e.time % 4
@@ -395,9 +409,6 @@ export default {
         sureY = y + ys + yt / 3
         // this.plotPoint('yellow', xt, yt)
       }
-      if (color === 'cyan') {
-        console.log(sureX, sureY)
-      }
       this.plotPoint(color, sureX, sureY)
     },
     calLong (x1, y1, x2, y2) {
@@ -503,24 +514,29 @@ export default {
       // let tempX = 0
       // let tempY = 0
       for (let i = 0; i < mockGrid.length; i++) {
-        if (Math.abs(mockGrid[i][0] - rssi1) < 7 && Math.abs(mockGrid[0][1] - rssi2) < 7 && Math.abs(mockGrid[i][2] - rssi3) < 7) {
-          mockGrid[i].push(i, 0)
+        if (Math.abs(mockGrid[i][0] - rssi1) < 12 && Math.abs(mockGrid[i][1] - rssi2) < 12 && Math.abs(mockGrid[i][2] - rssi3) < 12) {
+          mockGrid[i][3] = i
+          mockGrid[i][4] = 0
           goodGrid.push(mockGrid[i])
+        } else if (i === mockGrid.length - 1 && goodGrid.length === 0) {
+          goodGrid.push([this.x, this.y, 1, 0])
         }
       }
       if (goodGrid.length > 1) {
-        for (let i = 0; i < gridArr.length; i++) {
+        console.log(goodGrid)
+        for (let i = 1; i < goodGrid.length; i++) {
           for (let j = 0; j < 3; j++) {
-            if (goodGrid[i][j] < 3) {
-              goodGrid[gridArr.length - 1]++
-              if (goodGrid[gridArr.length - 1] > 2) {
-                return ({x: (45 * (goodGrid[i][goodGrid[i].length - 1] % 12)) + 121 + 15, y: (Math.floor(goodGrid[i][goodGrid[i].length - 1] / 12) * 45) + 154 + 15})
+            // console.log(goodGrid[i][j])
+            if (goodGrid[i][j] < 7) {
+              goodGrid[i][goodGrid[i].length - 1]++
+              if (goodGrid[i][goodGrid[i].length - 1] > 2) {
+                return ({x: (45 * (goodGrid[i][goodGrid[i].length - 2] % 12)) + 121 + 15, y: (Math.floor(goodGrid[i][goodGrid[i].length - 2] / 12) * 45) + 154 + 15})
               }
             }
           }
         }
       }
-      return ({x: (45 * (goodGrid[0][goodGrid[0].length - 1] % 12)) + 121 + 15, y: (Math.floor(goodGrid[0][goodGrid[0].length - 1] / 12) * 45) + 154 + 15})
+      return ({x: (45 * (goodGrid[0][goodGrid[0].length - 2] % 12)) + 121 + 15, y: (Math.floor(goodGrid[0][goodGrid[0].length - 2] / 12) * 45) + 154 + 15})
     }
   },
   components: {
