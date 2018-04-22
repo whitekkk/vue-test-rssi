@@ -548,6 +548,7 @@ export default {
             index = i
             return ({x: (45 * (index % 12)) + 121 + 15, y: (Math.floor(index / 12) * 45) + 154 + 15})
           } else if ((rssiDif1 + rssiDif2 + rssiDif3) < temp) {
+            temp = rssiDif1 + rssiDif2 + rssiDif3
             index = i
           }
         }
