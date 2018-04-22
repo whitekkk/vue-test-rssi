@@ -511,32 +511,48 @@ export default {
       // quality solution
       let goodGrid = []
       let mockGrid = gridArr
-      // let tempX = 0
-      // let tempY = 0
+      // for (let i = 0; i < mockGrid.length; i++) {
+      //   if (Math.abs(mockGrid[i][0] - rssi1) < 12 && Math.abs(mockGrid[i][1] - rssi2) < 12 && Math.abs(mockGrid[i][2] - rssi3) < 12) {
+      //     mockGrid[i][3] = i
+      //     mockGrid[i][4] = 0
+      //     goodGrid.push(mockGrid[i])
+      //   } else if (i === mockGrid.length - 1 && goodGrid.length === 0) {
+      //     goodGrid.push([this.x, this.y, 1, 0])
+      //   }
+      // }
+      // if (goodGrid.length > 1) {
+      //   console.log(goodGrid)
+      //   for (let i = 1; i < goodGrid.length; i++) {
+      //     for (let j = 0; j < 3; j++) {
+      //       // console.log(goodGrid[i][j])
+      //       if (goodGrid[i][j] < 7) {
+      //         goodGrid[i][goodGrid[i].length - 1]++
+      //         if (goodGrid[i][goodGrid[i].length - 1] > 2) {
+      //           return ({x: (45 * (goodGrid[i][goodGrid[i].length - 2] % 12)) + 121 + 15, y: (Math.floor(goodGrid[i][goodGrid[i].length - 2] / 12) * 45) + 154 + 15})
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+      let temp = 999
+      let rssiDif1 = 0
+      let rssiDif2 = 0
+      let rssiDif3 = 0
+      let index = 0
       for (let i = 0; i < mockGrid.length; i++) {
-        if (Math.abs(mockGrid[i][0] - rssi1) < 12 && Math.abs(mockGrid[i][1] - rssi2) < 12 && Math.abs(mockGrid[i][2] - rssi3) < 12) {
-          mockGrid[i][3] = i
-          mockGrid[i][4] = 0
-          goodGrid.push(mockGrid[i])
-        } else if (i === mockGrid.length - 1 && goodGrid.length === 0) {
-          goodGrid.push([this.x, this.y, 1, 0])
-        }
-      }
-      if (goodGrid.length > 1) {
-        console.log(goodGrid)
-        for (let i = 1; i < goodGrid.length; i++) {
-          for (let j = 0; j < 3; j++) {
-            // console.log(goodGrid[i][j])
-            if (goodGrid[i][j] < 7) {
-              goodGrid[i][goodGrid[i].length - 1]++
-              if (goodGrid[i][goodGrid[i].length - 1] > 2) {
-                return ({x: (45 * (goodGrid[i][goodGrid[i].length - 2] % 12)) + 121 + 15, y: (Math.floor(goodGrid[i][goodGrid[i].length - 2] / 12) * 45) + 154 + 15})
-              }
-            }
+        rssiDif1 = Math.abs(mockGrid[i][0] - rssi1)
+        rssiDif2 = Math.abs(mockGrid[i][1] - rssi2)
+        rssiDif3 = Math.abs(mockGrid[i][2] - rssi3)
+        if (rssiDif1 < 12 && rssiDif2 < 12 && rssiDif3 < 12) {
+          if ((rssiDif1 + rssiDif2 + rssiDif3) === 0) {
+            index = i
+            return ({x: (45 * (index % 12)) + 121 + 15, y: (Math.floor(index / 12) * 45) + 154 + 15})
+          } else if ((rssiDif1 + rssiDif2 + rssiDif3) < temp) {
+            index = i
           }
         }
       }
-      return ({x: (45 * (goodGrid[0][goodGrid[0].length - 2] % 12)) + 121 + 15, y: (Math.floor(goodGrid[0][goodGrid[0].length - 2] / 12) * 45) + 154 + 15})
+      return ({x: (45 * (index % 12)) + 121 + 15, y: (Math.floor(index / 12) * 45) + 154 + 15})
     }
   },
   components: {
