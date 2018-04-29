@@ -108,7 +108,7 @@ export default {
           //
           // }
           // console.log(e.times)
-          if (e.mac === '2A:A4:3C:BF:3D:AA' || e.mac === '2A:A4:3C:BF:3E:12' || e.mac === '2A:A4:3C:BD:65:C6') {
+          if (e.mac === '2A:A4:3C:BF:3D:AA' || e.mac === '2A:A4:3C:BF:3E:5F' || e.mac === '0A:18:D6:2D:AC:BD') {
           // if (e.mac === '2A:A4:3C:BF:3D:AA' || e.mac === '2E:51:01:1A:2B:C0' || e.mac === 'E2:AA:96:D4:F3:46') {
             if (this.counts < 30) {
               console.log(e.ssid, e.rssi)
@@ -144,9 +144,9 @@ export default {
         i.farB = this.calculateDistanceTypeB(i.rssi, i.indicator, i.quality, i.mac)
         if (i.mac === '2A:A4:3C:BF:3D:AA') {
           temp1 = i.rssi
-        } else if (i.mac === '2A:A4:3C:BF:3E:12') {
+        } else if (i.mac === '2A:A4:3C:BF:3E:5F') {
           temp2 = i.rssi
-        } else if (i.mac === '2A:A4:3C:BD:65:C6') {
+        } else if (i.mac === '0A:18:D6:2D:AC:BD') {
           temp3 = i.rssi
         }
         // if (i.mac === '2A:A4:3C:BF:3D:AA') {
@@ -161,7 +161,8 @@ export default {
       })
       if (temp1 !== 0 && temp2 !== 0 && temp3 !== 0) {
         let tC = this.calculateDistanceTypeC(temp1, temp2, temp3)
-        if (tC.x !== 181 || this.x === 0) {
+        console.log(tC.x)
+        if (tC.x !== 136 || this.x === 0) {
           this.typeC = tC
           this.x = tC.x
           this.y = tC.y
@@ -509,7 +510,7 @@ export default {
     },
     calculateDistanceTypeC (rssi1, rssi2, rssi3) {
       // quality solution
-      let goodGrid = []
+      // let goodGrid = []
       let mockGrid = gridArr
       // for (let i = 0; i < mockGrid.length; i++) {
       //   if (Math.abs(mockGrid[i][0] - rssi1) < 12 && Math.abs(mockGrid[i][1] - rssi2) < 12 && Math.abs(mockGrid[i][2] - rssi3) < 12) {
@@ -543,17 +544,17 @@ export default {
         rssiDif1 = Math.abs(mockGrid[i][0] - rssi1)
         rssiDif2 = Math.abs(mockGrid[i][1] - rssi2)
         rssiDif3 = Math.abs(mockGrid[i][2] - rssi3)
-        if (rssiDif1 < 12 && rssiDif2 < 12 && rssiDif3 < 12) {
+        if (rssiDif1 < 5 && rssiDif2 < 5 && rssiDif3 < 5) {
           if ((rssiDif1 + rssiDif2 + rssiDif3) === 0) {
             index = i
-            return ({x: (45 * (index % 12)) + 121 + 15, y: (Math.floor(index / 12) * 45) + 154 + 15})
+            return ({x: (45 * (index % 17)) + 121 + 15, y: (Math.floor(index / 17) * 45) + 154 + 15})
           } else if ((rssiDif1 + rssiDif2 + rssiDif3) < temp) {
             temp = rssiDif1 + rssiDif2 + rssiDif3
             index = i
           }
         }
       }
-      return ({x: (45 * (index % 12)) + 121 + 15, y: (Math.floor(index / 12) * 45) + 154 + 15})
+      return ({x: (45 * (index % 17)) + 121 + 15, y: (Math.floor(index / 17) * 45) + 154 + 15})
     }
   },
   components: {
