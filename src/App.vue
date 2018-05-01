@@ -69,18 +69,19 @@ export default {
       width: {
         one: 0,
         two: 0,
-        now: '1359',
+        now: '1400',
         enable: false
       },
       height: {
         one: 0,
         two: 0,
-        now: 834,
+        now: 850,
         enable: false
       },
       n: 2.4,
       counts: 0,
-      typeC: {}
+      typeC: {},
+      time: 0
     }
   },
   created () {
@@ -162,10 +163,15 @@ export default {
       if (temp1 !== 0 && temp2 !== 0 && temp3 !== 0) {
         let tC = this.calculateDistanceTypeC(temp1, temp2, temp3)
         console.log(tC.x)
+        let time = d.getSeconds() % 4
         if (tC.x !== 136 || this.x === 0) {
-          this.typeC = tC
-          this.x = tC.x
-          this.y = tC.y
+          if ((Math.abs(tC.x - this.x) < 180 && Math.abs(tC.y - this.y) < 180) || this.x === 136 || (this.time - time) < 3) {
+            this.typeC = tC
+            this.x = tC.x
+            this.y = tC.y
+          } else {
+            this.time = d.getSeconds() % 4
+          }
         }
       }
       this.rssi.forEach((e, i) => {

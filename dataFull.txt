@@ -70,248 +70,392 @@ Start_UP_2018 -42
 TT-415 -44
 
 1,4
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -39
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -39
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -39
-Apple TV -51
-Start_UP_2018 -48
-TT-415 -41
-Apple TV -51
-Start_UP_2018 -48
-TT-415 -41
-Apple TV -51
-Start_UP_2018 -48
-TT-415 -41
-Apple TV -52
+Apple TV -46
 Start_UP_2018 -40
-TT-415 -46
-Apple TV -52
+TT-415 -41
+Apple TV -46
 Start_UP_2018 -40
-TT-415 -46
-Apple TV -52
+TT-415 -41
+Apple TV -46
 Start_UP_2018 -40
-TT-415 -46
-Apple TV -55
-Start_UP_2018 -46
-TT-415 -45
+TT-415 -41
+Apple TV -56
+Start_UP_2018 -38
+TT-415 -47
+Apple TV -56
+Start_UP_2018 -38
+TT-415 -47
+Apple TV -56
+Start_UP_2018 -38
+TT-415 -47
+Apple TV -56
+Start_UP_2018 -38
+TT-415 -47
+Apple TV -47
+Start_UP_2018 -38
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -38
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -38
+TT-415 -52
 
 1,5
-Apple TV -45
-Start_UP_2018 -38
-TT-415 -42
-Apple TV -45
-Start_UP_2018 -38
-TT-415 -42
-Apple TV -48
-Start_UP_2018 -49
-TT-415 -41
-Apple TV -48
-Start_UP_2018 -49
-TT-415 -41
-Apple TV -48
-Start_UP_2018 -49
-TT-415 -41
-Apple TV -48
-Start_UP_2018 -49
-TT-415 -41
-Apple TV -52
-Start_UP_2018 -46
-TT-415 -39
-Apple TV -52
-Start_UP_2018 -46
-TT-415 -39
-Apple TV -52
-Start_UP_2018 -46
-TT-415 -39
-Apple TV -49
-Start_UP_2018 -47
-TT-415 -48
+Apple TV -44
+Start_UP_2018 -42
+TT-415 -56
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -52
+Apple TV -42
+Start_UP_2018 -43
+TT-415 -52
 
 1,6
-Apple TV -56
-Start_UP_2018 -47
+Apple TV -43
+Start_UP_2018 -41
 TT-415 -54
-Apple TV -56
-Start_UP_2018 -47
+Apple TV -43
+Start_UP_2018 -41
 TT-415 -54
-Apple TV -51
-Start_UP_2018 -38
-TT-415 -46
-Apple TV -51
-Start_UP_2018 -38
-TT-415 -46
-Apple TV -51
-Start_UP_2018 -38
-TT-415 -46
-Apple TV -51
-Start_UP_2018 -38
-TT-415 -46
-Apple TV -51
-Start_UP_2018 -38
-TT-415 -46
-Apple TV -51
-Start_UP_2018 -38
-TT-415 -46
-Apple TV -56
-Start_UP_2018 -46
-TT-415 -41
-Apple TV -56
-Start_UP_2018 -46
-TT-415 -41
+Apple TV -43
+Start_UP_2018 -41
+TT-415 -54
+Apple TV -52
+Start_UP_2018 -40
+TT-415 -52
+Apple TV -52
+Start_UP_2018 -40
+TT-415 -52
+Apple TV -52
+Start_UP_2018 -40
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -51
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -51
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -51
+Apple TV -47
+Start_UP_2018 -43
+TT-415 -51
 
 1,7
+Apple TV -51
+Start_UP_2018 -53
+TT-415 -44
+Apple TV -51
+Start_UP_2018 -53
+TT-415 -44
 Apple TV -54
-Start_UP_2018 -40
-TT-415 -93
-Apple TV -54
-Start_UP_2018 -40
-TT-415 -93
-Apple TV -54
-Start_UP_2018 -40
-TT-415 -93
-Apple TV -54
-Start_UP_2018 -49
+Start_UP_2018 -44
 TT-415 -57
 Apple TV -54
-Start_UP_2018 -49
+Start_UP_2018 -44
 TT-415 -57
 Apple TV -54
-Start_UP_2018 -49
+Start_UP_2018 -44
 TT-415 -57
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -54
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -54
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -54
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -54
+Apple TV -47
+Start_UP_2018 -45
+TT-415 -53
+Apple TV -47
+Start_UP_2018 -45
+TT-415 -53
+Apple TV -47
+Start_UP_2018 -45
+TT-415 -53
+Apple TV -47
+Start_UP_2018 -45
+TT-415 -53
+Apple TV -47
+Start_UP_2018 -45
+TT-415 -53
 
 1,8
-Apple TV -50
+Apple TV -54
+Start_UP_2018 -44
+TT-415 -50
+Apple TV -54
+Start_UP_2018 -44
+TT-415 -50
+Apple TV -54
+Start_UP_2018 -44
+TT-415 -50
+Apple TV -49
+Start_UP_2018 -43
+TT-415 -54
+Apple TV -49
+Start_UP_2018 -43
+TT-415 -54
+Apple TV -49
+Start_UP_2018 -43
+TT-415 -54
+Apple TV -49
+Start_UP_2018 -43
+TT-415 -54
+Apple TV -54
 Start_UP_2018 -42
-TT-415 -44
-Apple TV -41
-Start_UP_2018 -39
-TT-415 -89
-Apple TV -41
-Start_UP_2018 -39
-TT-415 -89
-Apple TV -41
-Start_UP_2018 -39
-TT-415 -89
-Apple TV -41
-Start_UP_2018 -39
-TT-415 -89
-Apple TV -48
-Start_UP_2018 -46
-TT-415 -57
-Apple TV -48
-Start_UP_2018 -46
-TT-415 -57
-Apple TV -48
-Start_UP_2018 -46
-TT-415 -57
-Apple TV -41
-Start_UP_2018 -40
-TT-415 -50
-Apple TV -41
-Start_UP_2018 -40
-TT-415 -50
-
+TT-415 -99
+Apple TV -54
+Start_UP_2018 -42
+TT-415 -99
+Apple TV -54
+Start_UP_2018 -42
+TT-415 -99
 
 1,9
-Apple TV -50
-Start_UP_2018 -45
-TT-415 -44
-Apple TV -50
-Start_UP_2018 -45
-TT-415 -44
-Apple TV -50
-Start_UP_2018 -45
-TT-415 -44
-Apple TV -53
-Start_UP_2018 -49
-TT-415 -49
-Apple TV -53
-Start_UP_2018 -49
-TT-415 -49
-Apple TV -53
-Start_UP_2018 -49
-TT-415 -49
-Apple TV -53
-Start_UP_2018 -49
-TT-415 -49
-Apple TV -58
-Start_UP_2018 -45
+Apple TV -54
+Start_UP_2018 -46
 TT-415 -46
-Apple TV -58
-Start_UP_2018 -45
+Apple TV -54
+Start_UP_2018 -46
 TT-415 -46
-Apple TV -58
-Start_UP_2018 -45
+Apple TV -55
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -55
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -55
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -55
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -55
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -55
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -55
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -51
+Start_UP_2018 -49
 TT-415 -46
-
 
 1,10
-Apple TV -53
-Start_UP_2018 -51
-TT-415 -56
-Apple TV -53
-Start_UP_2018 -51
-TT-415 -56
-Apple TV -62
-Start_UP_2018 -53
-TT-415 -45
-Apple TV -62
-Start_UP_2018 -53
-TT-415 -45
-Apple TV -62
-Start_UP_2018 -53
-TT-415 -45
-Apple TV -62
-Start_UP_2018 -53
-TT-415 -45
-Apple TV -62
-Start_UP_2018 -53
-TT-415 -45
-Apple TV -62
-Start_UP_2018 -53
-TT-415 -45
-Apple TV -61
-Start_UP_2018 -46
-TT-415 -42
-Apple TV -61
-Start_UP_2018 -46
-TT-415 -42
-
-
-1,11
 x
 
+1,11
+/////////////////////////////////////////////////
+Apple TV -48
+Start_UP_2018 -61
+TT-415 -62
+Apple TV -48
+Start_UP_2018 -61
+TT-415 -62
+Apple TV -48
+Start_UP_2018 -61
+TT-415 -62
+Apple TV -48
+Start_UP_2018 -61
+TT-415 -62
+Apple TV -48
+Start_UP_2018 -61
+TT-415 -62
+Apple TV -48
+Start_UP_2018 -61
+TT-415 -62
+Apple TV -48
+Start_UP_2018 -61
+TT-415 -62
+Apple TV -48
+Start_UP_2018 -61
+TT-415 -62
+Apple TV -48
+Start_UP_2018 -61
+TT-415 -62
+Apple TV -48
+Start_UP_2018 -61
+TT-415 -62
 
 1,12
-
-
+Apple TV -43
+Start_UP_2018 -54
+TT-415 -58
+Apple TV -43
+Start_UP_2018 -54
+TT-415 -58
+Apple TV -43
+Start_UP_2018 -54
+TT-415 -58
+Apple TV -43
+Start_UP_2018 -54
+TT-415 -58
+Apple TV -43
+Start_UP_2018 -54
+TT-415 -58
+Apple TV -43
+Start_UP_2018 -54
+TT-415 -58
+Apple TV -43
+Start_UP_2018 -54
+TT-415 -58
+Apple TV -43
+Start_UP_2018 -54
+TT-415 -58
+Apple TV -40
+Start_UP_2018 -59
+TT-415 -55
+Apple TV -40
+Start_UP_2018 -59
+TT-415 -55
 
 1,13
-
+Apple TV -43
+Start_UP_2018 -51
+TT-415 -49
+Apple TV -43
+Start_UP_2018 -51
+TT-415 -49
+Apple TV -43
+Start_UP_2018 -51
+TT-415 -49
+Apple TV -43
+Start_UP_2018 -56
+TT-415 -50
+Apple TV -43
+Start_UP_2018 -56
+TT-415 -50
+Apple TV -43
+Start_UP_2018 -56
+TT-415 -50
+Apple TV -43
+Start_UP_2018 -56
+TT-415 -50
+Apple TV -43
+Start_UP_2018 -56
+TT-415 -50
+Apple TV -43
+Start_UP_2018 -56
+TT-415 -50
+Apple TV -41
+Start_UP_2018 -49
+TT-415 -48
 
 1,14
+Apple TV -46
+Start_UP_2018 -58
+TT-415 -50
+Apple TV -46
+Start_UP_2018 -58
+TT-415 -50
+Apple TV -47
+Start_UP_2018 -49
+TT-415 -55
+Apple TV -47
+Start_UP_2018 -49
+TT-415 -55
+Apple TV -47
+Start_UP_2018 -49
+TT-415 -55
+Apple TV -45
+Start_UP_2018 -52
+TT-415 -52
+Apple TV -45
+Start_UP_2018 -52
+TT-415 -52
+Apple TV -45
+Start_UP_2018 -52
+TT-415 -52
+Apple TV -45
+Start_UP_2018 -52
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -51
+TT-415 -55
 
 1,15
+Apple TV -44
+Start_UP_2018 -46
+TT-415 -62
+Apple TV -44
+Start_UP_2018 -46
+TT-415 -62
+Apple TV -44
+Start_UP_2018 -46
+TT-415 -62
+Apple TV -44
+Start_UP_2018 -46
+TT-415 -62
+Apple TV -49
+Start_UP_2018 -46
+TT-415 -54
+Apple TV -49
+Start_UP_2018 -46
+TT-415 -54
+Apple TV -49
+Start_UP_2018 -46
+TT-415 -54
+Apple TV -51
+Start_UP_2018 -51
+TT-415 -54
+Apple TV -51
+Start_UP_2018 -51
+TT-415 -54
+Apple TV -51
+Start_UP_2018 -51
+TT-415 -54
 
 1,16
+Apple TV -44
+Start_UP_2018 -60
+TT-415 -61
+Apple TV -41
+Start_UP_2018 -51
+TT-415 -61
+Apple TV -41
+Start_UP_2018 -51
+TT-415 -61
+Apple TV -41
+Start_UP_2018 -51
+TT-415 -61
+Apple TV -41
+Start_UP_2018 -51
+TT-415 -61
+Apple TV -44
+Start_UP_2018 -51
+TT-415 -61
+Apple TV -44
+Start_UP_2018 -51
+TT-415 -61
+Apple TV -44
+Start_UP_2018 -51
+TT-415 -61
+Apple TV -44
+Start_UP_2018 -51
+TT-415 -61
+Apple TV -44
+Start_UP_2018 -51
+TT-415 -61
 
 1,17
 
@@ -410,214 +554,392 @@ Start_UP_2018 -50
 TT-415 -46
 
 2,4
+Apple TV -51
+Start_UP_2018 -40
+TT-415 -46
 Apple TV -47
-Start_UP_2018 -38
-TT-415 -47
+Start_UP_2018 -47
+TT-415 -52
 Apple TV -47
-Start_UP_2018 -38
-TT-415 -47
+Start_UP_2018 -47
+TT-415 -52
 Apple TV -47
-Start_UP_2018 -38
-TT-415 -47
+Start_UP_2018 -47
+TT-415 -52
 Apple TV -47
-Start_UP_2018 -38
-TT-415 -47
-Apple TV -54
-Start_UP_2018 -37
-TT-415 -39
-Apple TV -54
-Start_UP_2018 -37
-TT-415 -39
-Apple TV -54
-Start_UP_2018 -37
-TT-415 -39
-Apple TV -50
-Start_UP_2018 -42
-TT-415 -56
-Apple TV -50
-Start_UP_2018 -42
-TT-415 -56
-Apple TV -50
-Start_UP_2018 -42
-TT-415 -56
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -63
+Start_UP_2018 -46
+TT-415 -46
+Apple TV -63
+Start_UP_2018 -46
+TT-415 -46
 
 2,5
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -47
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -47
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -47
-Apple TV -49
-Start_UP_2018 -41
-TT-415 -47
-Apple TV -55
-Start_UP_2018 -38
-TT-415 -56
-Apple TV -55
-Start_UP_2018 -38
-TT-415 -56
-Apple TV -55
-Start_UP_2018 -38
-TT-415 -56
-Apple TV -55
-Start_UP_2018 -38
-TT-415 -56
-Apple TV -55
-Start_UP_2018 -38
-TT-415 -56
-Apple TV -55
-Start_UP_2018 -38
-TT-415 -56
+Apple TV -62
+Start_UP_2018 -43
+TT-415 -49
+Apple TV -62
+Start_UP_2018 -43
+TT-415 -49
+Apple TV -62
+Start_UP_2018 -43
+TT-415 -49
+Apple TV -62
+Start_UP_2018 -43
+TT-415 -49
+Apple TV -53
+Start_UP_2018 -48
+TT-415 -54
+Apple TV -53
+Start_UP_2018 -48
+TT-415 -54
+Apple TV -53
+Start_UP_2018 -48
+TT-415 -54
+Apple TV -53
+Start_UP_2018 -46
+TT-415 -50
+Apple TV -53
+Start_UP_2018 -46
+TT-415 -50
+Apple TV -53
+Start_UP_2018 -46
+TT-415 -50
 
 2,6
-Apple TV -53
+Apple TV -50
+Start_UP_2018 -44
+TT-415 -55
+Apple TV -50
+Start_UP_2018 -44
+TT-415 -55
+Apple TV -50
+Start_UP_2018 -44
+TT-415 -55
+Apple TV -50
+Start_UP_2018 -44
+TT-415 -55
+Apple TV -50
+Start_UP_2018 -44
+TT-415 -55
+Apple TV -50
+Start_UP_2018 -44
+TT-415 -55
+Apple TV -50
+Start_UP_2018 -44
+TT-415 -55
+Apple TV -47
 Start_UP_2018 -42
-TT-415 -54
-Apple TV -53
+TT-415 -40
+Apple TV -47
 Start_UP_2018 -42
-TT-415 -54
-Apple TV -54
-Start_UP_2018 -41
-TT-415 -44
-Apple TV -54
-Start_UP_2018 -41
-TT-415 -44
-Apple TV -54
-Start_UP_2018 -41
-TT-415 -44
-Apple TV -54
-Start_UP_2018 -41
-TT-415 -44
-Apple TV -53
-Start_UP_2018 -37
-TT-415 -46
-Apple TV -53
-Start_UP_2018 -37
-TT-415 -46
-Apple TV -53
-Start_UP_2018 -37
-TT-415 -46
-Apple TV -55
+TT-415 -40
+Apple TV -47
 Start_UP_2018 -42
-TT-415 -42
+TT-415 -40
 
 2,7
-Apple TV -50
-Start_UP_2018 -48
-TT-415 -43
-Apple TV -50
-Start_UP_2018 -48
-TT-415 -43
-Apple TV -57
-Start_UP_2018 -48
-TT-415 -54
-Apple TV -57
-Start_UP_2018 -48
-TT-415 -54
-Apple TV -57
-Start_UP_2018 -48
-TT-415 -54
-Apple TV -54
-Start_UP_2018 -43
-TT-415 -44
-Apple TV -54
-Start_UP_2018 -43
-TT-415 -44
-Apple TV -54
-Start_UP_2018 -43
-TT-415 -44
-Apple TV -54
-Start_UP_2018 -43
-TT-415 -44
+Apple TV -93
+Start_UP_2018 -47
+TT-415 -53
+Apple TV -47
+Start_UP_2018 -52
+TT-415 -46
+Apple TV -47
+Start_UP_2018 -52
+TT-415 -46
+Apple TV -47
+Start_UP_2018 -52
+TT-415 -46
+Apple TV -47
+Start_UP_2018 -56
+TT-415 -50
+Apple TV -47
+Start_UP_2018 -56
+TT-415 -50
+Apple TV -47
+Start_UP_2018 -56
+TT-415 -50
+Apple TV -47
+Start_UP_2018 -56
+TT-415 -50
 Apple TV -52
-Start_UP_2018 -42
-TT-415 -44
+Start_UP_2018 -43
+TT-415 -50
+Apple TV -52
+Start_UP_2018 -43
+TT-415 -50
 
 2,8
-Apple TV -54
-Start_UP_2018 -44
-TT-415 -47
-Apple TV -54
-Start_UP_2018 -44
-TT-415 -47
-Apple TV -54
-Start_UP_2018 -44
-TT-415 -47
-Apple TV -54
-Start_UP_2018 -44
-TT-415 -47
-Apple TV -63
+Apple TV -48
 Start_UP_2018 -47
-TT-415 -46
-Apple TV -63
+TT-415 -52
+Apple TV -48
 Start_UP_2018 -47
-TT-415 -46
-Apple TV -63
-Start_UP_2018 -47
-TT-415 -46
-Apple TV -55
-Start_UP_2018 -43
-TT-415 -55
-Apple TV -55
-Start_UP_2018 -43
-TT-415 -55
-Apple TV -55
-Start_UP_2018 -43
-TT-415 -55
+TT-415 -52
+Apple TV -52
+Start_UP_2018 -37
+TT-415 -48
+Apple TV -52
+Start_UP_2018 -37
+TT-415 -48
+Apple TV -52
+Start_UP_2018 -37
+TT-415 -48
+Apple TV -56
+Start_UP_2018 -37
+TT-415 -49
+Apple TV -56
+Start_UP_2018 -37
+TT-415 -49
+Apple TV -56
+Start_UP_2018 -37
+TT-415 -49
+Apple TV -56
+Start_UP_2018 -37
+TT-415 -49
+Apple TV -44
+Start_UP_2018 -53
+TT-415 -43
 
 2,9
-Apple TV -55
-Start_UP_2018 -42
-TT-415 -51
-Apple TV -55
-Start_UP_2018 -42
-TT-415 -51
-Apple TV -55
-Start_UP_2018 -42
-TT-415 -51
-Apple TV -55
-Start_UP_2018 -42
-TT-415 -51
-Apple TV -55
-Start_UP_2018 -42
-TT-415 -51
-Apple TV -55
-Start_UP_2018 -42
-TT-415 -41
-Apple TV -55
-Start_UP_2018 -42
-TT-415 -41
-Apple TV -55
-Start_UP_2018 -42
-TT-415 -41
-Apple TV -61
-Start_UP_2018 -42
-TT-415 -45
-Apple TV -61
-Start_UP_2018 -42
-TT-415 -45
+Apple TV -53
+Start_UP_2018 -55
+TT-415 -46
+Apple TV -53
+Start_UP_2018 -55
+TT-415 -46
+Apple TV -48
+Start_UP_2018 -95
+TT-415 -50
+Apple TV -48
+Start_UP_2018 -95
+TT-415 -50
+Apple TV -48
+Start_UP_2018 -95
+TT-415 -50
+Apple TV -48
+Start_UP_2018 -95
+TT-415 -50
+Apple TV -48
+Start_UP_2018 -95
+TT-415 -50
+Apple TV -48
+Start_UP_2018 -95
+TT-415 -50
+Apple TV -48
+Start_UP_2018 -95
+TT-415 -50
+Apple TV -48
+Start_UP_2018 -95
+TT-415 -50
 
 2,10
 x
 
 
 2,11
-x
-
+Apple TV -44
+Start_UP_2018 -48
+TT-415 -56
+Apple TV -44
+Start_UP_2018 -48
+TT-415 -56
+Apple TV -44
+Start_UP_2018 -48
+TT-415 -56
+Apple TV -44
+Start_UP_2018 -48
+TT-415 -56
+Apple TV -50
+Start_UP_2018 -57
+TT-415 -55
+Apple TV -50
+Start_UP_2018 -57
+TT-415 -55
+Apple TV -50
+Start_UP_2018 -57
+TT-415 -55
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -54
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -54
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -54
 
 2,12
+Apple TV -57
+Start_UP_2018 -48
+TT-415 -49
+Apple TV -57
+Start_UP_2018 -48
+TT-415 -49
+Apple TV -57
+Start_UP_2018 -48
+TT-415 -49
+Apple TV -57
+Start_UP_2018 -48
+TT-415 -49
+Apple TV -50
+Start_UP_2018 -50
+TT-415 -66
+Apple TV -50
+Start_UP_2018 -50
+TT-415 -66
+Apple TV -50
+Start_UP_2018 -50
+TT-415 -66
+Apple TV -46
+Start_UP_2018 -44
+TT-415 -50
+Apple TV -46
+Start_UP_2018 -44
+TT-415 -50
+Apple TV -46
+Start_UP_2018 -44
+TT-415 -50
 
 2,13
+Apple TV -49
+Start_UP_2018 -50
+TT-415 -49
+Apple TV -49
+Start_UP_2018 -50
+TT-415 -49
+Apple TV -49
+Start_UP_2018 -50
+TT-415 -49
+Apple TV -53
+Start_UP_2018 -52
+TT-415 -60
+Apple TV -53
+Start_UP_2018 -52
+TT-415 -60
+Apple TV -53
+Start_UP_2018 -52
+TT-415 -60
+Apple TV -43
+Start_UP_2018 -52
+TT-415 -57
+Apple TV -43
+Start_UP_2018 -52
+TT-415 -57
+Apple TV -43
+Start_UP_2018 -52
+TT-415 -57
+Apple TV -43
+Start_UP_2018 -52
+TT-415 -57
 
 2,14
+Apple TV -48
+Start_UP_2018 -48
+TT-415 -47
+Apple TV -48
+Start_UP_2018 -48
+TT-415 -47
+Apple TV -53
+Start_UP_2018 -46
+TT-415 -53
+Apple TV -53
+Start_UP_2018 -46
+TT-415 -53
+Apple TV -53
+Start_UP_2018 -46
+TT-415 -53
+Apple TV -53
+Start_UP_2018 -46
+TT-415 -53
+Apple TV -42
+Start_UP_2018 -46
+TT-415 -50
+Apple TV -42
+Start_UP_2018 -46
+TT-415 -50
+Apple TV -42
+Start_UP_2018 -46
+TT-415 -50
+Apple TV -50
+Start_UP_2018 -46
+TT-415 -61
 
 2,15
+Apple TV -46
+Start_UP_2018 -52
+TT-415 -51
+Apple TV -42
+Start_UP_2018 -55
+TT-415 -46
+Apple TV -42
+Start_UP_2018 -55
+TT-415 -46
+Apple TV -42
+Start_UP_2018 -55
+TT-415 -46
+Apple TV -42
+Start_UP_2018 -55
+TT-415 -46
+Apple TV -42
+Start_UP_2018 -55
+TT-415 -46
+Apple TV -42
+Start_UP_2018 -55
+TT-415 -46
+Apple TV -50
+Start_UP_2018 -54
+TT-415 -54
+Apple TV -50
+Start_UP_2018 -54
+TT-415 -54
+Apple TV -50
+Start_UP_2018 -54
+TT-415 -54
 
 2,16
+Apple TV -55
+Start_UP_2018 -52
+TT-415 -50
+Apple TV -43
+Start_UP_2018 -56
+TT-415 -62
+Apple TV -43
+Start_UP_2018 -56
+TT-415 -62
+Apple TV -43
+Start_UP_2018 -56
+TT-415 -62
+Apple TV -40
+Start_UP_2018 -52
+TT-415 -49
+Apple TV -40
+Start_UP_2018 -52
+TT-415 -49
+Apple TV -40
+Start_UP_2018 -52
+TT-415 -49
+Apple TV -40
+Start_UP_2018 -52
+TT-415 -49
+Apple TV -40
+Start_UP_2018 -52
+TT-415 -49
+Apple TV -40
+Start_UP_2018 -52
+TT-415 -49
 
 2,17
 
@@ -717,213 +1039,394 @@ TT-415 -29
 
 
 3,4
-Apple TV -48
-Start_UP_2018 -96
-TT-415 -46
-Apple TV -48
-Start_UP_2018 -96
-TT-415 -46
-Apple TV -48
-Start_UP_2018 -96
-TT-415 -46
-Apple TV -48
-Start_UP_2018 -96
-TT-415 -46
-Apple TV -45
-Start_UP_2018 -41
-TT-415 -53
-Apple TV -45
-Start_UP_2018 -41
-TT-415 -53
-Apple TV -45
-Start_UP_2018 -41
-TT-415 -53
-Apple TV -45
-Start_UP_2018 -41
-TT-415 -53
-Apple TV -45
-Start_UP_2018 -41
-TT-415 -53
-Apple TV -45
-Start_UP_2018 -41
-TT-415 -53
+Apple TV -51
+Start_UP_2018 -43
+TT-415 -45
+Apple TV -51
+Start_UP_2018 -43
+TT-415 -45
+Apple TV -51
+Start_UP_2018 -43
+TT-415 -45
+Apple TV -51
+Start_UP_2018 -43
+TT-415 -45
+Apple TV -51
+Start_UP_2018 -43
+TT-415 -45
+Apple TV -51
+Start_UP_2018 -43
+TT-415 -45
+Apple TV -53
+Start_UP_2018 -51
+TT-415 -45
+Apple TV -53
+Start_UP_2018 -51
+TT-415 -45
+Apple TV -53
+Start_UP_2018 -51
+TT-415 -45
+Apple TV -52
+Start_UP_2018 -54
+TT-415 -43
 
 
 3,5
 Apple TV -54
-Start_UP_2018 -39
-TT-415 -39
-Apple TV -54
-Start_UP_2018 -39
-TT-415 -39
-Apple TV -54
-Start_UP_2018 -39
-TT-415 -39
-Apple TV -51
-Start_UP_2018 -39
-TT-415 -44
-Apple TV -51
-Start_UP_2018 -39
-TT-415 -44
-Apple TV -51
-Start_UP_2018 -39
-TT-415 -44
-Apple TV -51
-Start_UP_2018 -39
-TT-415 -44
-Apple TV -51
-Start_UP_2018 -39
-TT-415 -44
-Apple TV -51
-Start_UP_2018 -39
-TT-415 -44
-Apple TV -49
 Start_UP_2018 -41
+TT-415 -48
+Apple TV -54
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -54
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -51
+Start_UP_2018 -44
+TT-415 -47
+Apple TV -51
+Start_UP_2018 -44
+TT-415 -47
+Apple TV -51
+Start_UP_2018 -44
+TT-415 -47
+Apple TV -51
+Start_UP_2018 -44
+TT-415 -47
+Apple TV -47
+Start_UP_2018 -37
+TT-415 -46
+Apple TV -47
+Start_UP_2018 -37
+TT-415 -46
+Apple TV -47
+Start_UP_2018 -37
+TT-415 -46
 
 
 3,6
 Apple TV -48
-Start_UP_2018 -52
-TT-415 -43
-Apple TV -48
-Start_UP_2018 -52
-TT-415 -43
-Apple TV -48
-Start_UP_2018 -52
-TT-415 -43
+Start_UP_2018 -43
+TT-415 -57
+Apple TV -46
+Start_UP_2018 -50
+TT-415 -47
+Apple TV -46
+Start_UP_2018 -50
+TT-415 -47
+Apple TV -46
+Start_UP_2018 -50
+TT-415 -47
+Apple TV -46
+Start_UP_2018 -50
+TT-415 -47
 Apple TV -51
-Start_UP_2018 -47
-TT-415 -44
+Start_UP_2018 -41
+TT-415 -58
 Apple TV -51
-Start_UP_2018 -47
-TT-415 -44
+Start_UP_2018 -41
+TT-415 -58
 Apple TV -51
-Start_UP_2018 -47
-TT-415 -44
-Apple TV -51
-Start_UP_2018 -47
-TT-415 -44
-Apple TV -44
+Start_UP_2018 -41
+TT-415 -58
+Apple TV -56
 Start_UP_2018 -39
-TT-415 -38
-Apple TV -44
+TT-415 -45
+Apple TV -56
 Start_UP_2018 -39
-TT-415 -38
-Apple TV -44
-Start_UP_2018 -39
-TT-415 -38
+TT-415 -45
 
 3,7
-Apple TV -53
-Start_UP_2018 -43
+Apple TV -48
+Start_UP_2018 -47
+TT-415 -49
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -45
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -45
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -45
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -45
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -45
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -45
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -45
+Apple TV -45
+Start_UP_2018 -40
 TT-415 -41
-Apple TV -46
-Start_UP_2018 -44
-TT-415 -48
-Apple TV -46
-Start_UP_2018 -44
-TT-415 -48
-Apple TV -46
-Start_UP_2018 -44
-TT-415 -48
-Apple TV -46
-Start_UP_2018 -44
-TT-415 -48
-Apple TV -49
-Start_UP_2018 -42
-TT-415 -54
-Apple TV -49
-Start_UP_2018 -42
-TT-415 -54
-Apple TV -49
-Start_UP_2018 -42
-TT-415 -54
-Apple TV -49
-Start_UP_2018 -42
-TT-415 -54
-Apple TV -49
-Start_UP_2018 -42
-TT-415 -54
+Apple TV -45
+Start_UP_2018 -40
+TT-415 -41
 
 3,8
-Apple TV -41
-Start_UP_2018 -41
-TT-415 -42
-Apple TV -41
-Start_UP_2018 -41
-TT-415 -42
-Apple TV -48
-Start_UP_2018 -90
-TT-415 -45
-Apple TV -42
-Start_UP_2018 -41
-TT-415 -41
-Apple TV -42
-Start_UP_2018 -41
-TT-415 -41
-Apple TV -42
-Start_UP_2018 -41
-TT-415 -41
-Apple TV -42
-Start_UP_2018 -41
-TT-415 -41
-Apple TV -48
+Apple TV -55
 Start_UP_2018 -45
-TT-415 -64
-Apple TV -48
+TT-415 -51
+Apple TV -55
 Start_UP_2018 -45
-TT-415 -64
-Apple TV -48
+TT-415 -51
+Apple TV -55
 Start_UP_2018 -45
-TT-415 -64
+TT-415 -51
+Apple TV -47
+Start_UP_2018 -42
+TT-415 -54
+Apple TV -47
+Start_UP_2018 -42
+TT-415 -54
+Apple TV -47
+Start_UP_2018 -42
+TT-415 -54
+Apple TV -47
+Start_UP_2018 -42
+TT-415 -54
+Apple TV -51
+Start_UP_2018 -41
+TT-415 -47
+Apple TV -51
+Start_UP_2018 -41
+TT-415 -47
+Apple TV -51
+Start_UP_2018 -41
+TT-415 -47
 
 3,9
-Apple TV -55
-Start_UP_2018 -41
-TT-415 -41
-Apple TV -55
-Start_UP_2018 -41
-TT-415 -41
-Apple TV -54
+Apple TV -50
+Start_UP_2018 -40
+TT-415 -43
+Apple TV -50
+Start_UP_2018 -40
+TT-415 -43
+Apple TV -50
+Start_UP_2018 -40
+TT-415 -43
+Apple TV -50
+Start_UP_2018 -40
+TT-415 -43
+Apple TV -49
 Start_UP_2018 -43
-TT-415 -55
-Apple TV -54
+TT-415 -52
+Apple TV -49
 Start_UP_2018 -43
-TT-415 -55
-Apple TV -54
+TT-415 -52
+Apple TV -49
 Start_UP_2018 -43
-TT-415 -55
+TT-415 -52
 Apple TV -49
-Start_UP_2018 -46
-TT-415 -41
-Apple TV -49
-Start_UP_2018 -46
-TT-415 -41
-Apple TV -49
-Start_UP_2018 -46
-TT-415 -41
-Apple TV -49
-Start_UP_2018 -46
-TT-415 -41
-Apple TV -49
-Start_UP_2018 -46
-TT-415 -41
+Start_UP_2018 -43
+TT-415 -52
+Apple TV -45
+Start_UP_2018 -39
+TT-415 -47
+Apple TV -45
+Start_UP_2018 -39
+TT-415 -47
 
 3,10
 x
 
 
 3,11
+Apple TV -47
+Start_UP_2018 -53
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -53
+TT-415 -52
+Apple TV -44
+Start_UP_2018 -47
+TT-415 -46
+Apple TV -44
+Start_UP_2018 -47
+TT-415 -46
+Apple TV -44
+Start_UP_2018 -47
+TT-415 -46
+Apple TV -44
+Start_UP_2018 -47
+TT-415 -46
+Apple TV -47
+Start_UP_2018 -59
+TT-415 -54
+Apple TV -47
+Start_UP_2018 -59
+TT-415 -54
+Apple TV -47
+Start_UP_2018 -59
+TT-415 -54
+Apple TV -43
+Start_UP_2018 -43
+TT-415 -51
 
 3,12
+Apple TV -46
+Start_UP_2018 -55
+TT-415 -55
+Apple TV -46
+Start_UP_2018 -55
+TT-415 -55
+Apple TV -46
+Start_UP_2018 -55
+TT-415 -55
+Apple TV -46
+Start_UP_2018 -55
+TT-415 -55
+Apple TV -46
+Start_UP_2018 -59
+TT-415 -55
+Apple TV -46
+Start_UP_2018 -59
+TT-415 -55
+Apple TV -46
+Start_UP_2018 -59
+TT-415 -55
+Apple TV -47
+Start_UP_2018 -55
+TT-415 -57
+Apple TV -47
+Start_UP_2018 -55
+TT-415 -57
+Apple TV -47
+Start_UP_2018 -55
+TT-415 -57
 
 3,13
+Apple TV -47
+Start_UP_2018 -49
+TT-415 -52
+Apple TV -47
+Start_UP_2018 -49
+TT-415 -52
+Apple TV -53
+Start_UP_2018 -48
+TT-415 -53
+Apple TV -53
+Start_UP_2018 -48
+TT-415 -53
+Apple TV -53
+Start_UP_2018 -48
+TT-415 -53
+Apple TV -53
+Start_UP_2018 -48
+TT-415 -53
+Apple TV -41
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -41
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -41
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -44
+Start_UP_2018 -47
+TT-415 -60
 
 3,14
+Apple TV -40
+Start_UP_2018 -48
+TT-415 -46
+Apple TV -48
+Start_UP_2018 -50
+TT-415 -56
+Apple TV -48
+Start_UP_2018 -50
+TT-415 -56
+Apple TV -48
+Start_UP_2018 -50
+TT-415 -56
+Apple TV -48
+Start_UP_2018 -50
+TT-415 -56
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -46
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -46
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -46
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -46
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -46
 
 3,15
+Apple TV -48
+Start_UP_2018 -49
+TT-415 -64
+Apple TV -48
+Start_UP_2018 -49
+TT-415 -64
+Apple TV -51
+Start_UP_2018 -56
+TT-415 -60
+Apple TV -51
+Start_UP_2018 -56
+TT-415 -60
+Apple TV -51
+Start_UP_2018 -56
+TT-415 -60
+Apple TV -51
+Start_UP_2018 -56
+TT-415 -60
+Apple TV -50
+Start_UP_2018 -57
+TT-415 -49
+Apple TV -50
+Start_UP_2018 -57
+TT-415 -49
+Apple TV -50
+Start_UP_2018 -57
+TT-415 -49
+Apple TV -50
+Start_UP_2018 -57
+TT-415 -49
 
 3,16
+Apple TV -47
+Start_UP_2018 -44
+TT-415 -67
+Apple TV -42
+Start_UP_2018 -58
+TT-415 -47
+Apple TV -42
+Start_UP_2018 -58
+TT-415 -47
+Apple TV -42
+Start_UP_2018 -58
+TT-415 -47
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -45
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -45
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -45
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -45
+Apple TV -54
+Start_UP_2018 -50
+TT-415 -53
+Apple TV -54
+Start_UP_2018 -50
+TT-415 -53
 
 3,17
 
@@ -1025,248 +1528,452 @@ Start_UP_2018 -43
 TT-415 -30
 
 4,4
+Apple TV -49
+Start_UP_2018 -41
+TT-415 -40
+Apple TV -49
+Start_UP_2018 -41
+TT-415 -40
+Apple TV -49
+Start_UP_2018 -41
+TT-415 -40
+Apple TV -48
+Start_UP_2018 -40
+TT-415 -45
 Apple TV -55
-Start_UP_2018 -38
+Start_UP_2018 -41
+TT-415 -41
+Apple TV -55
+Start_UP_2018 -41
+TT-415 -41
+Apple TV -46
+Start_UP_2018 -36
 TT-415 -42
-Apple TV -55
-Start_UP_2018 -38
+Apple TV -46
+Start_UP_2018 -36
 TT-415 -42
-Apple TV -47
-Start_UP_2018 -38
-TT-415 -34
-Apple TV -47
-Start_UP_2018 -38
-TT-415 -34
-Apple TV -47
-Start_UP_2018 -38
-TT-415 -34
-Apple TV -56
-Start_UP_2018 -45
-TT-415 -40
-Apple TV -56
-Start_UP_2018 -45
-TT-415 -40
-Apple TV -56
-Start_UP_2018 -45
-TT-415 -40
-Apple TV -55
-Start_UP_2018 -32
-TT-415 -38
-Apple TV -55
-Start_UP_2018 -32
-TT-415 -38
+Apple TV -46
+Start_UP_2018 -36
+TT-415 -42
+Apple TV -46
+Start_UP_2018 -36
+TT-415 -42
 
 4,5
-Apple TV -62
-Start_UP_2018 -40
-TT-415 -39
-Apple TV -62
-Start_UP_2018 -40
-TT-415 -39
-Apple TV -62
-Start_UP_2018 -40
-TT-415 -39
-Apple TV -49
-Start_UP_2018 -36
-TT-415 -33
-Apple TV -49
-Start_UP_2018 -36
-TT-415 -33
-Apple TV -49
-Start_UP_2018 -36
-TT-415 -33
-Apple TV -62
-Start_UP_2018 -39
+Apple TV -51
+Start_UP_2018 -41
+TT-415 -46
+Apple TV -51
+Start_UP_2018 -41
+TT-415 -46
+Apple TV -51
+Start_UP_2018 -44
 TT-415 -51
-Apple TV -62
-Start_UP_2018 -39
+Apple TV -51
+Start_UP_2018 -44
 TT-415 -51
-Apple TV -62
-Start_UP_2018 -39
+Apple TV -51
+Start_UP_2018 -44
 TT-415 -51
-Apple TV -46
-Start_UP_2018 -39
-TT-415 -45
+Apple TV -51
+Start_UP_2018 -44
+TT-415 -51
+Apple TV -45
+Start_UP_2018 -40
+TT-415 -48
+Apple TV -45
+Start_UP_2018 -40
+TT-415 -48
+Apple TV -45
+Start_UP_2018 -40
+TT-415 -48
+Apple TV -53
+Start_UP_2018 -42
+TT-415 -47
 
 4,6
+Apple TV -56
+Start_UP_2018 -38
+TT-415 -52
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -42
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -42
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -42
+Apple TV -54
+Start_UP_2018 -46
+TT-415 -42
+Apple TV -47
+Start_UP_2018 -47
+TT-415 -64
+Apple TV -47
+Start_UP_2018 -47
+TT-415 -64
+Apple TV -47
+Start_UP_2018 -47
+TT-415 -64
+Apple TV -47
+Start_UP_2018 -47
+TT-415 -64
 Apple TV -48
-Start_UP_2018 -44
-TT-415 -39
-Apple TV -58
-Start_UP_2018 -45
-TT-415 -41
-Apple TV -58
-Start_UP_2018 -45
-TT-415 -41
-Apple TV -58
-Start_UP_2018 -45
-TT-415 -41
-Apple TV -58
-Start_UP_2018 -45
-TT-415 -41
-Apple TV -50
-Start_UP_2018 -38
-TT-415 -42
-Apple TV -50
-Start_UP_2018 -38
-TT-415 -42
-Apple TV -50
-Start_UP_2018 -38
-TT-415 -42
-Apple TV -58
-Start_UP_2018 -45
-TT-415 -39
-Apple TV -58
-Start_UP_2018 -45
-TT-415 -39
+Start_UP_2018 -37
+TT-415 -49
 
 4,7
-Apple TV -46
-Start_UP_2018 -45
+Apple TV -44
+Start_UP_2018 -46
+TT-415 -55
+Apple TV -44
+Start_UP_2018 -46
+TT-415 -55
+Apple TV -43
+Start_UP_2018 -35
 TT-415 -46
 Apple TV -43
-Start_UP_2018 -37
-TT-415 -49
+Start_UP_2018 -35
+TT-415 -46
 Apple TV -43
-Start_UP_2018 -37
-TT-415 -49
+Start_UP_2018 -35
+TT-415 -46
 Apple TV -43
-Start_UP_2018 -37
-TT-415 -49
-Apple TV -51
-Start_UP_2018 -43
+Start_UP_2018 -35
+TT-415 -46
+Apple TV -50
+Start_UP_2018 -44
 TT-415 -45
-Apple TV -51
-Start_UP_2018 -43
+Apple TV -50
+Start_UP_2018 -44
 TT-415 -45
-Apple TV -51
-Start_UP_2018 -43
+Apple TV -50
+Start_UP_2018 -44
 TT-415 -45
-Apple TV -43
-Start_UP_2018 -45
-TT-415 -44
-Apple TV -43
-Start_UP_2018 -45
-TT-415 -44
-Apple TV -43
-Start_UP_2018 -45
-TT-415 -44
-
+Apple TV -50
+Start_UP_2018 -44
+TT-415 -45
 
 4,8
 Apple TV -48
-Start_UP_2018 -40
-TT-415 -43
+Start_UP_2018 -46
+TT-415 -56
 Apple TV -48
-Start_UP_2018 -40
-TT-415 -43
-Apple TV -44
-Start_UP_2018 -40
-TT-415 -45
-Apple TV -44
-Start_UP_2018 -40
-TT-415 -45
-Apple TV -44
-Start_UP_2018 -40
-TT-415 -45
-Apple TV -44
-Start_UP_2018 -40
-TT-415 -45
-Apple TV -53
-Start_UP_2018 -42
+Start_UP_2018 -46
+TT-415 -56
+Apple TV -48
+Start_UP_2018 -39
 TT-415 -48
-Apple TV -53
-Start_UP_2018 -42
+Apple TV -48
+Start_UP_2018 -39
 TT-415 -48
-Apple TV -53
-Start_UP_2018 -42
+Apple TV -48
+Start_UP_2018 -39
 TT-415 -48
-Apple TV -53
-Start_UP_2018 -42
+Apple TV -48
+Start_UP_2018 -39
 TT-415 -48
-
+Apple TV -39
+Start_UP_2018 -36
+TT-415 -45
+Apple TV -39
+Start_UP_2018 -36
+TT-415 -45
+Apple TV -39
+Start_UP_2018 -36
+TT-415 -45
+Apple TV -39
+Start_UP_2018 -36
+TT-415 -45
 
 4,9
-Apple TV -45
+Apple TV -46
 Start_UP_2018 -45
-TT-415 -45
-Apple TV -45
-Start_UP_2018 -45
-TT-415 -45
-Apple TV -45
-Start_UP_2018 -45
-TT-415 -45
-Apple TV -45
-Start_UP_2018 -45
-TT-415 -45
+TT-415 -48
 Apple TV -43
-Start_UP_2018 -42
-TT-415 -51
+Start_UP_2018 -41
+TT-415 -48
 Apple TV -43
-Start_UP_2018 -42
-TT-415 -51
+Start_UP_2018 -41
+TT-415 -48
 Apple TV -43
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -43
+Start_UP_2018 -41
+TT-415 -48
+Apple TV -40
+Start_UP_2018 -45
+TT-415 -48
+Apple TV -40
+Start_UP_2018 -45
+TT-415 -48
+Apple TV -40
+Start_UP_2018 -45
+TT-415 -48
+Apple TV -40
+Start_UP_2018 -45
+TT-415 -48
+Apple TV -39
 Start_UP_2018 -42
-TT-415 -51
-Apple TV -42
-Start_UP_2018 -44
-TT-415 -44
-Apple TV -42
-Start_UP_2018 -44
-TT-415 -44
-Apple TV -42
-Start_UP_2018 -44
-TT-415 -44
-
+TT-415 -97
 
 4,10
-Apple TV -45
-Start_UP_2018 -47
+Apple TV -43
+Start_UP_2018 -42
+TT-415 -48
+Apple TV -40
+Start_UP_2018 -46
+TT-415 -46
+Apple TV -40
+Start_UP_2018 -46
+TT-415 -46
+Apple TV -40
+Start_UP_2018 -46
+TT-415 -46
+Apple TV -40
+Start_UP_2018 -46
 TT-415 -46
 Apple TV -44
-Start_UP_2018 -41
-TT-415 -52
+Start_UP_2018 -52
+TT-415 -53
 Apple TV -44
-Start_UP_2018 -41
-TT-415 -52
+Start_UP_2018 -52
+TT-415 -53
 Apple TV -44
-Start_UP_2018 -41
-TT-415 -52
-Apple TV -48
-Start_UP_2018 -49
-TT-415 -52
-Apple TV -48
-Start_UP_2018 -49
-TT-415 -52
-Apple TV -48
-Start_UP_2018 -49
-TT-415 -52
-Apple TV -48
-Start_UP_2018 -49
-TT-415 -52
-Apple TV -43
-Start_UP_2018 -39
-TT-415 -44
-Apple TV -43
-Start_UP_2018 -39
-TT-415 -44
-
+Start_UP_2018 -52
+TT-415 -53
+Apple TV -44
+Start_UP_2018 -52
+TT-415 -53
+Apple TV -44
+Start_UP_2018 -52
+TT-415 -53
 
 4,11
-x
+Apple TV -37
+Start_UP_2018 -47
+TT-415 -44
+Apple TV -37
+Start_UP_2018 -47
+TT-415 -44
+Apple TV -37
+Start_UP_2018 -47
+TT-415 -44
+Apple TV -38
+Start_UP_2018 -57
+TT-415 -62
+Apple TV -40
+Start_UP_2018 -41
+TT-415 -54
+Apple TV -40
+Start_UP_2018 -41
+TT-415 -54
+Apple TV -40
+Start_UP_2018 -41
+TT-415 -54
+Apple TV -47
+Start_UP_2018 -44
+TT-415 -55
+Apple TV -47
+Start_UP_2018 -44
+TT-415 -55
+Apple TV -47
+Start_UP_2018 -44
+TT-415 -55
 
 4,12
-
+Apple TV -40
+Start_UP_2018 -47
+TT-415 -55
+Apple TV -40
+Start_UP_2018 -47
+TT-415 -55
+Apple TV -40
+Start_UP_2018 -47
+TT-415 -55
+Apple TV -56
+Start_UP_2018 -52
+TT-415 -54
+Apple TV -56
+Start_UP_2018 -52
+TT-415 -54
+Apple TV -56
+Start_UP_2018 -52
+TT-415 -54
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -45
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -45
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -45
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -45
 
 4,13
+Apple TV -46
+Start_UP_2018 -46
+TT-415 -57
+Apple TV -46
+Start_UP_2018 -46
+TT-415 -57
+Apple TV -46
+Start_UP_2018 -46
+TT-415 -57
+Apple TV -46
+Start_UP_2018 -46
+TT-415 -57
+Apple TV -46
+Start_UP_2018 -46
+TT-415 -57
+Apple TV -46
+Start_UP_2018 -46
+TT-415 -57
+Apple TV -40
+Start_UP_2018 -50
+TT-415 -53
+Apple TV -40
+Start_UP_2018 -50
+TT-415 -53
+Apple TV -40
+Start_UP_2018 -50
+TT-415 -53
+Apple TV -39
+Start_UP_2018 -51
+TT-415 -47
 
 4,14
+Apple TV -42
+Start_UP_2018 -59
+TT-415 -55
+Apple TV -42
+Start_UP_2018 -59
+TT-415 -55
+Apple TV -42
+Start_UP_2018 -59
+TT-415 -55
+Apple TV -43
+Start_UP_2018 -48
+TT-415 -48
+Apple TV -43
+Start_UP_2018 -48
+TT-415 -48
+Apple TV -43
+Start_UP_2018 -48
+TT-415 -48
+Apple TV -43
+Start_UP_2018 -48
+TT-415 -48
+Apple TV -47
+Start_UP_2018 -47
+TT-415 -49
+Apple TV -47
+Start_UP_2018 -47
+TT-415 -49
+Apple TV -47
+Start_UP_2018 -47
+TT-415 -49
 
 4,15
+Apple TV -38
+Start_UP_2018 -53
+TT-415 -47
+Apple TV -40
+Start_UP_2018 -53
+TT-415 -49
+Apple TV -40
+Start_UP_2018 -53
+TT-415 -49
+Apple TV -40
+Start_UP_2018 -53
+TT-415 -49
+Apple TV -38
+Start_UP_2018 -54
+TT-415 -61
+Apple TV -38
+Start_UP_2018 -54
+TT-415 -61
+Apple TV -38
+Start_UP_2018 -54
+TT-415 -61
+Apple TV -38
+Start_UP_2018 -54
+TT-415 -61
+Apple TV -38
+Start_UP_2018 -54
+TT-415 -61
+Apple TV -38
+Start_UP_2018 -54
+TT-415 -61
 
 4,16
+Apple TV -47
+Start_UP_2018 -55
+TT-415 -49
+Apple TV -47
+Start_UP_2018 -55
+TT-415 -49
+Apple TV -41
+Start_UP_2018 -58
+TT-415 -62
+Apple TV -41
+Start_UP_2018 -58
+TT-415 -62
+Apple TV -41
+Start_UP_2018 -58
+TT-415 -62
+Apple TV -41
+Start_UP_2018 -58
+TT-415 -62
+Apple TV -48
+Start_UP_2018 -55
+TT-415 -57
+Apple TV -48
+Start_UP_2018 -55
+TT-415 -57
+Apple TV -48
+Start_UP_2018 -55
+TT-415 -57
+Apple TV -41
+Start_UP_2018 -59
+TT-415 -59
 
 4,17
+Apple TV -44
+Start_UP_2018 -47
+TT-415 -55
+Apple TV -44
+Start_UP_2018 -47
+TT-415 -55
+Apple TV -44
+Start_UP_2018 -47
+TT-415 -55
+Apple TV -44
+Start_UP_2018 -47
+TT-415 -55
+Apple TV -45
+Start_UP_2018 -48
+TT-415 -52
+Apple TV -45
+Start_UP_2018 -48
+TT-415 -52
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -51
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -51
+Apple TV -43
+Start_UP_2018 -49
+TT-415 -51
+Apple TV -39
+Start_UP_2018 -51
+TT-415 -50
 
 5,1
 Apple TV -54
@@ -1589,28 +2296,233 @@ Start_UP_2018 -50
 TT-415 -44
 
 5,11
-
+Apple TV -44
+Start_UP_2018 -44
+TT-415 -48
+Apple TV -44
+Start_UP_2018 -44
+TT-415 -48
+Apple TV -45
+Start_UP_2018 -46
+TT-415 -55
+Apple TV -45
+Start_UP_2018 -46
+TT-415 -55
+Apple TV -45
+Start_UP_2018 -46
+TT-415 -55
+Apple TV -41
+Start_UP_2018 -56
+TT-415 -55
+Apple TV -41
+Start_UP_2018 -56
+TT-415 -55
+Apple TV -41
+Start_UP_2018 -56
+TT-415 -55
+Apple TV -41
+Start_UP_2018 -56
+TT-415 -55
+Apple TV -43
+Start_UP_2018 -50
+TT-415 -45
 
 5,12
-
+Apple TV -40
+Start_UP_2018 -53
+TT-415 -47
+Apple TV -44
+Start_UP_2018 -45
+TT-415 -50
+Apple TV -44
+Start_UP_2018 -45
+TT-415 -50
+Apple TV -44
+Start_UP_2018 -45
+TT-415 -50
+Apple TV -36
+Start_UP_2018 -48
+TT-415 -46
+Apple TV -36
+Start_UP_2018 -48
+TT-415 -46
+Apple TV -36
+Start_UP_2018 -48
+TT-415 -46
+Apple TV -36
+Start_UP_2018 -48
+TT-415 -46
+Apple TV -46
+Start_UP_2018 -43
+TT-415 -46
+Apple TV -46
+Start_UP_2018 -43
+TT-415 -46
 
 5,13
 
+Apple TV -37
+Start_UP_2018 -51
+TT-415 -48
+Apple TV -37
+Start_UP_2018 -51
+TT-415 -48
+Apple TV -37
+Start_UP_2018 -51
+TT-415 -48
+Apple TV -37
+Start_UP_2018 -51
+TT-415 -48
+Apple TV -37
+Start_UP_2018 -51
+TT-415 -48
+Apple TV -37
+Start_UP_2018 -51
+TT-415 -48
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -48
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -48
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -48
+Apple TV -38
+Start_UP_2018 -45
+TT-415 -48
 
 5,14
-
+Apple TV -42
+Start_UP_2018 -45
+TT-415 -45
+Apple TV -42
+Start_UP_2018 -45
+TT-415 -45
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -42
+Start_UP_2018 -47
+TT-415 -52
+Apple TV -39
+Start_UP_2018 -49
+TT-415 -48
+Apple TV -39
+Start_UP_2018 -49
+TT-415 -48
+Apple TV -39
+Start_UP_2018 -49
+TT-415 -48
+Apple TV -39
+Start_UP_2018 -49
+TT-415 -48
 
 5,15
-
+Apple TV -44
+Start_UP_2018 -54
+TT-415 -59
+Apple TV -44
+Start_UP_2018 -54
+TT-415 -59
+Apple TV -44
+Start_UP_2018 -54
+TT-415 -59
+Apple TV -44
+Start_UP_2018 -54
+TT-415 -59
+Apple TV -47
+Start_UP_2018 -50
+TT-415 -48
+Apple TV -47
+Start_UP_2018 -50
+TT-415 -48
+Apple TV -47
+Start_UP_2018 -50
+TT-415 -48
+Apple TV -47
+Start_UP_2018 -50
+TT-415 -48
+Apple TV -47
+Start_UP_2018 -50
+TT-415 -54
+Apple TV -47
+Start_UP_2018 -50
+TT-415 -54
 
 5,16
 
+Apple TV -53
+Start_UP_2018 -52
+TT-415 -57
+Apple TV -42
+Start_UP_2018 -44
+TT-415 -62
+Apple TV -42
+Start_UP_2018 -44
+TT-415 -62
+Apple TV -42
+Start_UP_2018 -44
+TT-415 -62
+Apple TV -40
+Start_UP_2018 -54
+TT-415 -59
+Apple TV -40
+Start_UP_2018 -54
+TT-415 -59
+Apple TV -40
+Start_UP_2018 -54
+TT-415 -59
+Apple TV -40
+Start_UP_2018 -54
+TT-415 -59
+Apple TV -40
+Start_UP_2018 -54
+TT-415 -59
+Apple TV -40
+Start_UP_2018 -54
+TT-415 -59
 
 5,17
-
+Apple TV -42
+Start_UP_2018 -46
+TT-415 -50
+Apple TV -42
+Start_UP_2018 -46
+TT-415 -50
+Apple TV -42
+Start_UP_2018 -46
+TT-415 -50
+Apple TV -42
+Start_UP_2018 -46
+TT-415 -50
+Apple TV -44
+Start_UP_2018 -63
+TT-415 -57
+Apple TV -44
+Start_UP_2018 -63
+TT-415 -57
+Apple TV -44
+Start_UP_2018 -63
+TT-415 -57
+Apple TV -45
+Start_UP_2018 -51
+TT-415 -47
+Apple TV -45
+Start_UP_2018 -51
+TT-415 -47
+Apple TV -45
+Start_UP_2018 -51
+TT-415 -47
 
 6,1
-
+x
 
 6,2
 Apple TV -45
