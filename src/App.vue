@@ -75,7 +75,7 @@ export default {
       height: {
         one: 0,
         two: 0,
-        now: 850,
+        now: 900,
         enable: false
       },
       n: 2.4,
@@ -162,10 +162,11 @@ export default {
       })
       if (temp1 !== 0 && temp2 !== 0 && temp3 !== 0) {
         let tC = this.calculateDistanceTypeC(temp1, temp2, temp3)
-        console.log(tC.x)
+        // console.log(tC.x)
         let time = d.getSeconds() % 4
         if (tC.x !== 136 || this.x === 0) {
-          if ((Math.abs(tC.x - this.x) < 180 && Math.abs(tC.y - this.y) < 180) || this.x === 136 || (this.time - time) < 3) {
+          if ((Math.abs(tC.x - this.x) < 90 && Math.abs(tC.y - this.y) < 90) || (this.time - time) > 2) {
+            console.log(this.x)
             this.typeC = tC
             this.x = tC.x
             this.y = tC.y
@@ -344,6 +345,7 @@ export default {
     },
     drawPointC (p, color) {
       this.plotPoint(color, p.x, p.y)
+      console.log('px', p.x)
     },
     drawPoint (p, color) {
       // var x1 = this.position[0].x
