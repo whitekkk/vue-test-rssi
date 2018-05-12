@@ -99,7 +99,7 @@ export default {
         enable: false,
         notSure: 0
       },
-      lastTemp: 999,
+      lastTemp: 1,
       nextStep: 0,
       allStep: [[480, 370], [480, 420], [480, 470], [480, 520], [480, 570], [405, 570], [330, 570], [330, 520], [330, 470], [405, 470], [480, 470], [555, 470], [630, 470]],
       sec: 1
@@ -488,13 +488,15 @@ export default {
           this.newPlot(sureX, sureY)
         } else {
           if (this.laststand.notSure > 3) {
-            this.plotPoint(color, sureX, sureY)
-            this.newPlot(sureX, sureY)
+            this.plotPoint(color, this.laststand.x, this.laststand.y)
+            this.newPlot(this.laststand.x, this.laststand.y)
           } else {
             if (lastD < this.lastTemp) {
               this.laststand.x = sureX
               this.laststand.y = sureY
+              this.lastTemp = 1
             }
+            this.lastTemp++
             this.laststand.notSure++
           }
         }
@@ -582,7 +584,7 @@ export default {
           }
           // console.log(item.newCount)
           item.newCount++
-          if (item.newCount > 10) {
+          if (item.newCount > 5) {
             item.newCount = 0
             item.rssiNow = item.rssiNew
             // item.rssiNew = 0
