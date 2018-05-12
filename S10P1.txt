@@ -1,0 +1,31 @@
+Distance 1.80 Time 16 : 34 : 19
+Distance 2.43 Time 16 : 34 : 19
+Distance 2.43 Time 16 : 34 : 20
+Distance 1.78 Time 16 : 34 : 22
+Distance 1.53 Time 16 : 34 : 23
+Distance 1.53 Time 16 : 34 : 24
+Distance 1.53 Time 16 : 34 : 25
+Distance 2.00 Time 16 : 34 : 27
+
+Distance 0.50 Time 16 : 35 : 41
+Distance 0.50 Time 16 : 35 : 42
+Distance 0.50 Time 16 : 35 : 43
+Distance 0.60 Time 16 : 35 : 45
+Distance 0.60 Time 16 : 35 : 46
+
+Distance 3.87 Time 16 : 37 : 51
+Distance 3.85 Time 16 : 37 : 51
+Distance 3.85 Time 16 : 37 : 52
+Distance 3.85 Time 16 : 37 : 53
+Distance 3.85 Time 16 : 37 : 54
+Distance 3.04 Time 16 : 37 : 55
+Distance 3.04 Time 16 : 37 : 56
+Distance 1.23 Time 16 : 37 : 57
+
+Distance 4.73 Time 16 : 39 : 30
+Distance 4.28 Time 16 : 39 : 30
+Distance 4.28 Time 16 : 39 : 31
+Distance 4.28 Time 16 : 39 : 32
+Distance 4.23 Time 16 : 39 : 33
+Distance 4.23 Time 16 : 39 : 34
+Distance 4.23 Time 16 : 39 : 35

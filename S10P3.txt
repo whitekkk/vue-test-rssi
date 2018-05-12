@@ -1,0 +1,49 @@
+Distance 1.65 Time 17 : 4 : 41
+Distance 2.05 Time 17 : 4 : 42
+Distance 2.05 Time 17 : 4 : 43
+Distance 2.05 Time 17 : 4 : 44
+Distance 2.59 Time 17 : 4 : 46
+Distance 2.44 Time 17 : 4 : 47
+Distance 2.44 Time 17 : 4 : 48
+Distance 2.44 Time 17 : 4 : 50
+
+Distance 2.40 Time 17 : 6 : 22
+Distance 2.40 Time 17 : 6 : 27
+Distance 1.55 Time 17 : 6 : 28
+Distance 1.79 Time 17 : 6 : 30
+Distance 1.08 Time 17 : 6 : 31
+
+Distance 3.66 Time 17 : 7 : 34
+Distance 2.59 Time 17 : 7 : 34
+Distance 2.59 Time 17 : 7 : 35
+Distance 2.59 Time 17 : 7 : 36
+Distance 3.27 Time 17 : 7 : 38
+Distance 3.27 Time 17 : 7 : 39
+
+Distance 5.21 Time 17 : 8 : 42
+Distance 4.91 Time 17 : 8 : 43
+Distance 4.91 Time 17 : 8 : 44
+Distance 2.63 Time 17 : 8 : 46
+Distance 2.63 Time 17 : 8 : 47
+Distance 3.31 Time 17 : 8 : 49
+Distance 3.31 Time 17 : 8 : 50
+
+Distance 4.41 Time 17 : 9 : 52
+Distance 3.58 Time 17 : 9 : 53
+Distance 3.58 Time 17 : 9 : 54
+Distance 3.58 Time 17 : 9 : 55
+Distance 3.58 Time 17 : 9 : 56
+Distance 3.58 Time 17 : 9 : 57
+Distance 3.58 Time 17 : 9 : 58
+Distance 3.25 Time 17 : 10 : 0
+Distance 3.25 Time 17 : 10 : 1
+
+Distance 1.52 Time 17 : 10 : 59
+Distance 1.52 Time 17 : 11 : 0
+Distance 2.29 Time 17 : 11 : 1
+Distance 1.05 Time 17 : 11 : 2
+Distance 0.76 Time 17 : 11 : 4
+Distance 0.76 Time 17 : 11 : 5
+Distance 0.76 Time 17 : 11 : 6
+Distance 0.76 Time 17 : 11 : 11
+Distance 0.83 Time 17 : 11 : 11

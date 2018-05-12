@@ -1,0 +1,113 @@
+point 1
+Distance 2.60 Time 19 : 32 : 49
+Distance 2.35 Time 19 : 32 : 50
+Distance 2.35 Time 19 : 32 : 51
+Distance 3.53 Time 19 : 32 : 53
+Distance 3.53 Time 19 : 32 : 54
+Distance 3.53 Time 19 : 32 : 55
+Distance 3.58 Time 19 : 32 : 56
+Distance 3.58 Time 19 : 32 : 57
+
+
+point 2
+
+Distance 1.88 Time 19 : 36 : 50
+Distance 1.86 Time 19 : 36 : 51
+Distance 1.86 Time 19 : 36 : 52
+Distance 1.99 Time 19 : 36 : 58
+Distance 2.26 Time 19 : 36 : 58
+
+
+point 3
+
+Distance 2.95 Time 19 : 39 : 8
+Distance 2.95 Time 19 : 39 : 9
+Distance 2.95 Time 19 : 39 : 10
+Distance 2.87 Time 19 : 39 : 12
+
+point 4
+
+Distance 4.73 Time 19 : 40 : 39
+Distance 4.09 Time 19 : 40 : 40
+Distance 5.08 Time 19 : 40 : 42
+Distance 5.08 Time 19 : 40 : 43
+Distance 5.83 Time 19 : 40 : 45
+Distance 5.83 Time 19 : 40 : 47
+Distance 5.83 Time 19 : 40 : 48
+
+point 5
+
+Distance 0.61 Time 19 : 42 : 30
+Distance 0.61 Time 19 : 42 : 31
+Distance 0.61 Time 19 : 42 : 32
+Distance 0.66 Time 19 : 42 : 34
+Distance 0.66 Time 19 : 42 : 35
+Distance 0.66 Time 19 : 42 : 36
+Distance 0.11 Time 19 : 42 : 37
+
+point 6
+
+Distance 1.20 Time 19 : 45 : 27
+Distance 1.20 Time 19 : 45 : 28
+Distance 1.20 Time 19 : 45 : 29
+Distance 1.43 Time 19 : 45 : 31
+Distance 1.28 Time 19 : 45 : 31
+Distance 1.28 Time 19 : 45 : 32
+Distance 1.28 Time 19 : 45 : 33
+Distance 1.76 Time 19 : 45 : 38
+
+point 7
+
+Distance 2.85 Time 19 : 50 : 56
+Distance 1.61 Time 19 : 50 : 57
+Distance 1.61 Time 19 : 50 : 58
+Distance 1.61 Time 19 : 51 : 3
+Distance 1.61 Time 19 : 51 : 4
+
+point 8
+
+Distance 5.36 Time 19 : 53 : 11
+Distance 5.36 Time 19 : 53 : 12
+Distance 5.36 Time 19 : 53 : 13
+Distance 6.33 Time 19 : 53 : 15
+Distance 6.33 Time 19 : 53 : 16
+Distance 4.74 Time 19 : 53 : 18
+
+point 9
+
+Distance 2.83 Time 19 : 54 : 32
+Distance 2.83 Time 19 : 54 : 33
+Distance 2.87 Time 19 : 54 : 38
+Distance 1.46 Time 19 : 54 : 38
+Distance 1.46 Time 19 : 54 : 39
+Distance 1.46 Time 19 : 54 : 40
+Distance 1.46 Time 19 : 54 : 41
+
+point 10
+
+Distance 1.64 Time 19 : 56 : 9
+Distance 1.64 Time 19 : 56 : 10
+Distance 1.64 Time 19 : 56 : 11
+Distance 1.72 Time 19 : 56 : 17
+Distance 0.92 Time 19 : 56 : 17
+
+point 11
+
+Distance 3.64 Time 19 : 58 : 16
+Distance 3.64 Time 19 : 58 : 18
+Distance 4.25 Time 19 : 58 : 20
+Distance 4.25 Time 19 : 58 : 21
+Distance 3.35 Time 19 : 58 : 22
+Distance 3.05 Time 19 : 58 : 27
+
+point 12
+
+Distance 8.27 Time 19 : 59 : 56
+Distance 8.93 Time 19 : 59 : 57
+Distance 8.93 Time 19 : 59 : 58
+Distance 8.93 Time 19 : 59 : 59
+Distance 8.93 Time 20 : 0 : 0
+Distance 6.87 Time 20 : 0 : 1
+Distance 5.65 Time 20 : 0 : 2
+Distance 5.79 Time 20 : 0 : 3
+Distance 5.03 Time 20 : 0 : 8

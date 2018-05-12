@@ -1,16 +1,19 @@
-<template>
+nse<template>
   <div @click.right="mousePosition()" class="screen" oncontextmenu="return false;">
     <div class="hxw">
       <button @click="setH"> H </button>x
       <button @click="setW"> W </button>
+      <button @click="setI"> I </button>
       <input v-model="n">
+      <input v-model="ratio">
+      <button @click="next"> Next </button>
     </div>
-    <img class="plan" src="../static/img/plan.png" :width="width.now" :height="height.now"/>
+    <img class="plan" src="../static/img/plan.jpg" :width="width.now" :height="height.now"/>
     <div class="aInp">
       <div class="inp" v-for="(i, index) in position" :key="index">
         {{i.name}}
         <!-- <input v-model="i.radius" @input="plotUser"> -->
-        {{i.radiusA / 50}}
+        {{i.radiusA / ratio}}
         <!-- <input v-model="radius[1]" @input="test">
         {{radius[1]}}
         <input v-model="radius[2]" @input="test">
@@ -23,10 +26,10 @@
     </div>
     <div class="bInp">
       <div v-for="(i, index) in rssi" :key="index" @click="getAPName(i.ssid, i.mac)">
-        {{i.ssid}} {{i.rssi}} channel{{i.channel}} rssi with quality{{i.quality/2 - 100}} {{i.mac}}
+        {{i.ssid}} {{i.rssi}}  channel{{i.channel}} rssi with quality{{i.quality/2 - 100}} {{i.mac}}
       </div>
     </div>
-    <div class="sho" @click.left="setHW()">
+    <div class="sho" @click.left="setHWI()">
       <canvas id="canvas" :width="width.now" :height="height.now"></canvas>
     </div>
     <div v-for="(i, index) in position" :key="index">
@@ -64,6 +67,8 @@ export default {
       rssi: [],
       x: 0,
       y: 0,
+      xA: 0,
+      yA: 0,
       name: '',
       mac: '',
       width: {
@@ -79,9 +84,25 @@ export default {
         enable: false
       },
       n: 2.4,
-      counts: 0,
       typeC: {},
-      time: 0
+      countC: 0,
+      typeAExtreme: [],
+      ratio: 50,
+      imarker: {
+        x: 0,
+        y: 0,
+        enable: false
+      },
+      laststand: {
+        x: 0,
+        y: 0,
+        enable: false,
+        notSure: 0
+      },
+      lastTemp: 999,
+      nextStep: 0,
+      allStep: [[480, 370], [480, 420], [480, 470], [480, 520], [480, 570], [405, 570], [330, 570], [330, 520], [330, 470], [405, 470], [480, 470], [555, 470], [630, 470]],
+      sec: 1
     }
   },
   created () {
@@ -97,10 +118,14 @@ export default {
         this.rssi = network
         this.rssi.forEach(e => {
           e.time = d.getSeconds()
-          e.indicator = 40
+          e.indicator = 35
           e.morethan50 = morethan50
           e.indicator = this.changeIndicator(e.rssi, e.indicator)
           e.far = 0
+          e.rssiNow = 999
+          e.rssiNew = 999
+          e.count = 0
+          e.newCount = 0
         })
       } else {
         network.forEach(e => {
@@ -109,12 +134,8 @@ export default {
           //
           // }
           // console.log(e.times)
-          if (e.mac === '2A:A4:3C:BF:3D:AA' || e.mac === '2A:A4:3C:BF:3E:5F' || e.mac === '0A:18:D6:2D:AC:BD') {
+          if (e.mac === '2A:A4:3C:BD:65:C6' || e.mac === '2A:A4:3C:BF:3E:5F' || e.mac === '0A:18:D6:2D:AC:BD') {
           // if (e.mac === '2A:A4:3C:BF:3D:AA' || e.mac === '2E:51:01:1A:2B:C0' || e.mac === 'E2:AA:96:D4:F3:46') {
-            if (this.counts < 30) {
-              console.log(e.ssid, e.rssi)
-              this.counts++
-            }
             var item = this.rssi.find(rssi => rssi.mac === e.mac)
             if (item) {
               // console.log(item)
@@ -123,14 +144,19 @@ export default {
               item.rssi = e.rssi
               item.quality = e.quality
               item.indicator = this.changeIndicator(item.rssi, item.indicator)
+              item.count++
               // item.far = this.calculateDistanceTypeA(item.rssi, item.indicator, item.quality, item.mac)
             } else {
               // console.log('not item')
               e.time = d.getSeconds()
-              e.indicator = 40
+              e.indicator = 35
               e.morethan50 = morethan50
               e.indicator = this.changeIndicator(e.rssi, e.indicator)
               e.far = 0
+              e.rssiNow = 999
+              e.rssiNew = 999
+              e.count = 0
+              e.newCount = 0
               this.rssi.push(e)
             }
           }
@@ -141,9 +167,9 @@ export default {
       let temp3 = 0
       this.position.forEach(e => {
         let i = this.rssi.find(item => item.mac === e.mac)
-        i.farA = this.calculateDistanceTypeA(i.rssi, i.indicator, i.quality, i.mac)
-        i.farB = this.calculateDistanceTypeB(i.rssi, i.indicator, i.quality, i.mac)
-        if (i.mac === '2A:A4:3C:BF:3D:AA') {
+        i.farA = this.calculateDistanceTypeA(i)
+        i.farB = this.calculateDistanceTypeB(i)
+        if (i.mac === '2A:A4:3C:BD:65:C6') {
           temp1 = i.rssi
         } else if (i.mac === '2A:A4:3C:BF:3E:5F') {
           temp2 = i.rssi
@@ -163,23 +189,24 @@ export default {
       if (temp1 !== 0 && temp2 !== 0 && temp3 !== 0) {
         let tC = this.calculateDistanceTypeC(temp1, temp2, temp3)
         // console.log(tC.x)
-        let time = d.getSeconds() % 4
+        // let time = d.getSeconds() % 4
+        this.countC++
+        let gridS = this.countC * (45 * 3)
         if (tC.x !== 136 || this.x === 0) {
-          if ((Math.abs(tC.x - this.x) < 90 && Math.abs(tC.y - this.y) < 90) || (this.time - time) > 2) {
-            console.log(this.x)
+          if ((Math.abs(tC.x - this.x) < gridS && Math.abs(tC.y - this.y) < gridS) || this.countS > 3) {
             this.typeC = tC
             this.x = tC.x
             this.y = tC.y
-          } else {
-            this.time = d.getSeconds() % 4
+            this.countC = 0
           }
+          // this.time = d.getSeconds() % 4
         }
       }
       this.rssi.forEach((e, i) => {
         let time = e.time % 4
         let timeNow = d.getSeconds() % 4
         let checkTime = Math.abs(timeNow - time)
-        if (checkTime >= 3) {
+        if (checkTime >= 2) {
           this.rssi.splice(i, 1)
         }
       })
@@ -201,7 +228,10 @@ export default {
     setW () {
       this.width.enable = true
     },
-    setHW () {
+    setI () {
+      this.imarker.enable = true
+    },
+    setHWI () {
       var img = document.querySelector('img')
       this.width.now = img.width
       var canvas = document.getElementById('canvas')
@@ -216,7 +246,7 @@ export default {
           // console.log(this.width.now)
         } else {
           this.width.two = position.clientX
-          this.width.now = (50 / Math.abs(this.width.one - this.width.two)) * this.width.now
+          this.width.now = (this.ratio / Math.abs(this.width.one - this.width.two)) * this.width.now
           this.width.one = 0
           this.width.two = 0
           this.width.enable = false
@@ -229,13 +259,19 @@ export default {
           this.height.one = position.clientY
         } else {
           this.height.two = position.clientY
-          this.height.now = (50 / Math.abs(this.height.one - this.height.two)) * this.height.now
+          this.height.now = (this.ratio / Math.abs(this.height.one - this.height.two)) * this.height.now
           this.height.one = 0
           this.height.two = 0
           this.height.enable = false
           // console.log(this.height.now)
           canvas.height = this.height.now
         }
+      } else if (this.imarker.enable) {
+        this.imarker.x = position.clientX + window.scrollX
+        this.imarker.y = position.clientY + window.scrollY
+        this.imarker.enable = false
+        // console.log('yes')
+        this.plotPoint('#660000', this.imarker.x, this.imarker.y)
       }
     },
     slideAP (e) {
@@ -256,8 +292,6 @@ export default {
       var inverst = Math.abs(rssi)
       if (inverst < indicator) {
         return inverst
-      } else if (indicator >= 40) {
-        return 40
       } else {
         return indicator
       }
@@ -267,13 +301,23 @@ export default {
       this.mac = mac
       // console.log(name, mac)
     },
+    next () {
+      // console.clear()
+      this.laststand.x = 0
+      this.laststand.y = 0
+      this.laststand.enable = true
+      let x = this.imarker.x = this.allStep[this.nextStep][0]
+      let y = this.imarker.y = this.allStep[this.nextStep][1]
+      this.plotPoint('#660000', x, y)
+      this.nextStep++
+    },
     plotUser () {
-      var canvas = document.getElementById('canvas')
-      var context = canvas.getContext('2d')
+      // var canvas = document.getElementById('canvas')
+      // var context = canvas.getContext('2d')
       var img = document.querySelector('img')
       this.width.now = img.width
-      canvas.width = this.width.now
-      context.clearRect(0, 0, canvas.width, canvas.height)
+      // canvas.width = this.width.now
+      // context.clearRect(0, 0, canvas.width, canvas.height)
       var allPA = []
       var allPB = []
       for (var i = 0; i < this.position.length; i++) {
@@ -285,10 +329,11 @@ export default {
       }
       if (this.position.length > 2) {
         this.drawPoint(allPA, 'cyan')
-        this.drawPoint(allPB, 'magenta')
-        this.drawPointC(this.typeC, 'yellow')
+        // this.drawPoint(allPB, 'magenta')
+        // this.drawPointC(this.typeC, 'yellow')
         // console.log(this.position.length)
       }
+      this.plotPoint('#660000', this.imarker.x, this.imarker.y)
     },
     updateCanvas () {
       // if (this.count < 4) {
@@ -306,16 +351,28 @@ export default {
       var i = this.position.findIndex(items => items.mac === this.mac)
       // console.log(i)
       // console.log(window.scrollX)
-      // console.log(position.clientX)
-      // console.log(position.clientY)
+      console.log(position.clientX)
+      console.log(position.clientY)
       if (i === -1 && this.mac !== '') {
         if (this.count < 6) {
           this.mouseX = position.clientX + window.scrollX
           this.mouseY = position.clientY + window.scrollY
+          if (this.mac === '2A:A4:3C:BD:65:C6') {
+            this.mouseX = 646
+            this.mouseY = 465
+          }
+          if (this.mac === '2A:A4:3C:BF:3E:5F') {
+            this.mouseX = 394
+            this.mouseY = 376
+          }
+          if (this.mac === '0A:18:D6:2D:AC:BD') {
+            this.mouseX = 394
+            this.mouseY = 562
+          }
           this.position.push({name: this.name, x: this.mouseX, y: this.mouseY, mac: this.mac, radiusA: 0, radiusB: 0, radiusC: 0})
           var item = this.rssi.find(rssi => rssi.mac === this.mac)
-          item.farA = this.calculateDistanceTypeA(item.rssi, item.indicator, item.indicator, item.mac)
-          item.farB = this.calculateDistanceTypeB(item.rssi, item.indicator, item.indicator, item.mac)
+          item.farA = this.calculateDistanceTypeA(item)
+          item.farB = this.calculateDistanceTypeB(item)
           // item.farC = this.calculateDistanceTypeC(item.rssi, item.indicator, item.indicator, item.mac)
           // this.radius.push(0)
           this.updateCanvas()
@@ -339,13 +396,12 @@ export default {
       context.beginPath()
       context.strokeStyle = 'black'
       context.lineWidth = 2
-      context.arc(this.position[i].x, this.position[i].y, this.position[i].radiusA, 0, Math.PI * 2, false)
+      // context.arc(this.position[i].x, this.position[i].y, this.position[i].radiusA, 0, Math.PI * 2, false)
       context.stroke()
       context.closePath()
     },
     drawPointC (p, color) {
       this.plotPoint(color, p.x, p.y)
-      console.log('px', p.x)
     },
     drawPoint (p, color) {
       // var x1 = this.position[0].x
@@ -418,7 +474,40 @@ export default {
         sureY = y + ys + yt / 3
         // this.plotPoint('yellow', xt, yt)
       }
-      this.plotPoint(color, sureX, sureY)
+      if (color === 'cyan' && this.laststand.enable) {
+        this.sec++
+        if (this.sec >= 10) {
+          this.sec = 0
+          this.laststand.enable = false
+        }
+        let lx = this.laststand.x
+        let ly = this.laststand.y
+        let lastD = Math.sqrt(Math.pow(sureX - lx, 2) + Math.pow(sureY - ly, 2)) // laststand Distance
+        if ((this.laststand.x === 0 && this.laststand.y === 0) || (lastD <= (1.25 + (this.lastTemp + 1)))) {
+          this.plotPoint(color, sureX, sureY)
+          this.newPlot(sureX, sureY)
+        } else {
+          if (this.laststand.notSure > 3) {
+            this.plotPoint(color, sureX, sureY)
+            this.newPlot(sureX, sureY)
+          } else {
+            if (lastD < this.lastTemp) {
+              this.laststand.x = sureX
+              this.laststand.y = sureY
+            }
+            this.laststand.notSure++
+          }
+        }
+      }
+    },
+    newPlot (sureX, sureY) {
+      let ix = this.imarker.x
+      let iy = this.imarker.y
+      this.laststand.x = sureX
+      this.laststand.y = sureY
+      let date = new Date()
+      d = Math.sqrt(Math.pow(sureX - ix, 2) + Math.pow(sureY - iy, 2))
+      console.log('Distance', (d / this.ratio).toFixed(2), 'Time', date.getHours(), ':', date.getMinutes(), ':', date.getSeconds())
     },
     calLong (x1, y1, x2, y2) {
       return (Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)))
@@ -438,7 +527,8 @@ export default {
         return (y1 - (Math.abs(y1 - y2) * r))
       }
     },
-    calculateDistanceTypeA (rssi, i, q, mac) {
+    calculateDistanceTypeA (item) {
+      // tem.rssi, item.indicator, item.quality, item.mac
       // var txPower = -43.8
       // // hard coded power value. Usually ranges between -59 to -65
       // if (rssi === 0) {
@@ -469,10 +559,45 @@ export default {
       //     item.morethan50[q] = rssi
       //   }
       //   rssi = item.morethan50[q]
+      // } else {
+      // console.log(item.rssiNow)4
+      let rssi = item.rssi
+      let low = (item.rssiNow + (-1.25 * item.count) + (-2))
+      let hight = (item.rssiNow + (1.25 * item.count) + (2))
+      if (item.rssiNow === 999 || (low < rssi && hight > rssi)) {
+        item.rssiNow = rssi
+        item.count = 0
+        item.newCount = 0
+        item.rssiNew = 999
+      } else {
+        if (item.rssiNew === 999) {
+          item.rssiNew = rssi
+        }
+        if (Math.abs(rssi - item.rssiNow) > 5) {
+          if (item.rssiNew < rssi) {
+            if (rssi < -57) {
+              rssi = -57
+            }
+            item.rssiNew = rssi
+          }
+          // console.log(item.newCount)
+          item.newCount++
+          if (item.newCount > 10) {
+            item.newCount = 0
+            item.rssiNow = item.rssiNew
+            // item.rssiNew = 0
+          }
+        }
+      }
+      if (item.count > 2) {
+        item.count = 0
+      }
+      // console.log(item.rssiNow)
+      rssi = item.rssiNow
       // }
       // nomal solution
       //
-      let rssiMin = i
+      let rssiMin = item.indicator
       // let distance = Math.abs((rssi + rssiMin) / 2)
       // if (distance === 0) {
       //   distance = 1
@@ -507,14 +632,15 @@ export default {
       //   }
       // }
       // console.log(distance)
-      return distance * 50
+      return distance * this.ratio
     },
-    calculateDistanceTypeB (rssi, i, q, mac) {
+    calculateDistanceTypeB (item) {
       // quality solutiont
-      rssi = Math.abs(q / 2 - 100)
-      let rssiMin = i
+      let rssi = item.rssi
+      rssi = item.quality / 2 - 100
+      let rssiMin = item.indicator
       let distance = Math.pow(10, ((-1 * rssi) - rssiMin) / (10 * this.n))
-      return distance * 50
+      return distance * this.ratio
     },
     calculateDistanceTypeC (rssi1, rssi2, rssi3) {
       // quality solution
